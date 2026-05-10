@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chineseloud Guide</title>
+<style>
+* { margin: 0; padding: 0; }
+body {
+  background-color: #0a0a0a;
+  color: white;
+  font-family: Arial;
+}
+@keyframes flicker {
+  0%, 90%, 100% { text-shadow: 0 0 30px rgba(255,100,0,0.8), 0 0 60px rgba(255,50,0,0.5); }
+  92% { text-shadow: 0 0 10px rgba(255,100,0,0.4); }
+  94% { text-shadow: 0 0 40px rgba(255,100,0,1), 0 0 80px rgba(255,50,0,0.8); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+.header {
+  background: linear-gradient(180deg, #1a0500, #ff4400);
+  padding: 24px 20px;
+  text-align: center;
+}
+.logo-x {
+  font-size: 72px;
+  font-weight: 900;
+  background: linear-gradient(180deg, #ffffff, #ffdd00, #ff6600, #ff2200);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: flicker 4s ease-in-out infinite;
+}
+.header h1 {
+  font-size: 24px;
+  letter-spacing: 4px;
+  animation: pulse 3s ease-in-out infinite;   
+}
+.header p {
+  font-size: 13px;
+  margin-top: 6px;
+  opacity: 0.9;
+}
+</div> {
+  background: #111;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+}
+.nav {
+  background: #111;
+  display: flex;
+  overflow-x: auto;
+  gap: 8px;
+  padding: 12px;
+  white-space: nowrap;
+}
+.nav a {
+  color: #ff8800;
+  text-decoration: none;
+  font-size: 13px;
+  padding: 6px 12px;
+  border: 1px solid #ff8800;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(180deg, #1a0500, #0a0a0a);
+}
+.hero h2 {
+  font-size: 24px;
+  color: #ff8800;
+  margin-bottom: 10px;
+}
+.hero p {
+  color: #aaa;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 24px 16px;
+  justify-content: center;
+}
+.card {
+  background: #1a1a1a;
+  border: 1px solid #ff4400;
+  border-radius: 12px;
+  padding: 18px;
+  width: 140px;
+  text-align: center;
+}
+.icon { font-size: 32px; margin-bottom: 8px; }
+.card h3 { color: #ff8800; font-size: 15px; margin-bottom: 6px; }
+.card p { color: #aaa; font-size: 12px; line-height: 1.5; }
+.footer {
+  background: #111;
+  text-align: center;
+  padding: 20px;
+  color: #555;
+  font-size: 13px;
+  margin-top: 20px;
+}
+.footer span {
+  color: #ff8800;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="logo-x">X</div>
+  <h1>CHINESELOUD GUIDE</h1>
+  <p>Your #1 Free Fire Guide in Nigeria</p>
+</div>
+
+<div class="nav">
+  <a href="index.html">Home</a>
+  <a href="Characters.html">Characters</a>
+  <a href="weapons.html">Weapons</a>
+  <a     href="sensitivity.html">Sensitivity</a>
+  <a href="strategies.html">Strategies</a>
+  <a href="ranktips.html">Rank Tips</a>
+</div>
+
+<div class="hero">
+  <h2>Dominate Every Match 🏆</h2>
+  <p>Best tips, characters, weapons and sensitivity guides for Free Fire players</p>
+</div>
+
+<div class="cards">
+  <div class="card">
+    <div class="icon">👤</div>
+    <h3>Characters</h3>
+    <p>Best characters and abilities guide</p>
+  </div>
+  <div class="card">
+    <div class="icon">🔫</div>
+    <h3>Weapons</h3>
+    <p>Best weapon combos explained</p>
+  </div>
+  <div class="card">
+    <div class="icon">📱</div>
+    <h3>Sensitivity</h3>
+    <p>Settings for every device</p>
+  </div>
+  <div class="card">
+    <div class="icon">🏆</div>
+    <h3>Rank Tips</h3>
+    <p>Bronze to Grandmaster guide</p>
+  </div>
+  <div class="card">
+    <div class="icon">⚔️</div>
+    <h3>Strategies</h3>
+    <p>Rusher, Camper, Sniper guides</p>
+  </div>
+</div>
+<div class="footer">
+  <p>Made by <span>Chineseloud</span> 🔥</p>
+  <p>Free Fire Nigeria Guide</p>
+</div>
+</body>
+</html>
