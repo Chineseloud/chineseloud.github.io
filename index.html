@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="5HOwyLZsTDnvfnVYH61xdnFsYWXP80E7VPgFHqZGrX8" />
+<title>Chineseloud.ff.guide</title>
+<meta name="description" content="Chineseloud is your ultimate Garena Free Fire guide. Get the best character builds, weapon stats, and battle royale strategy tips.">
+<meta name="keywords" content="Free Fire guide, FF tips, Free Fire characters, Free Fire weapons, Chineseloud">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --orange: #FF5E00;
+    --orange-light: #FF7A2F;
+    --orange-glow: rgba(255,94,0,0.22);
+    --dark: #0C0C0C;
+    --card: #161616;
+    --card-border: rgba(255,94,0,0.28);
+    --text: #F0F0F0;
+    --muted: #8a8a8a;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--dark);
+    color: var(--text);
+    font-family: 'Barlow', sans-serif;
+  }
+
+  nav {
+    background: rgba(12,12,12,0.95);
+    border-bottom: 1px solid var(--card-border);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(6px);
+  }
+  .nav-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+  .nav-logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--orange);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+  }
+  .nav-logo span { color: #fff; font-size: 0.85em; font-weight: 600; }
+  .nav-links { display: flex; gap: 4px; list-style: none; flex-wrap: wrap; }
+  .nav-links a {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    transition: color .2s, background .2s;
+  }
+  .nav-links a:hover { color: var(--orange); background: var(--orange-glow); }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    padding: 76px 20px 56px;
+    text-align: center;
+    background:
+      radial-gradient(700px 340px at 50% -10%, rgba(255,94,0,0.16), transparent 65%),
+      linear-gradient(180deg, #120a06 0%, #0C0C0C 60%);
+    border-bottom: 1px solid #1a1a1a;
+  }
+  .hero-mark {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 22px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--orange) 0%, #FF9A00 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+    color: #0C0C0C;
+    box-shadow: 0 12px 40px var(--orange-glow);
+  }
+  .hero-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(2.1rem, 8vw, 2.9rem);
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1.05;
+  }
+  .hero-title em {
+    font-style: normal;
+    background: linear-gradient(135deg, var(--orange) 0%, #FF9A00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero-sub {
+    color: var(--muted);
+    font-size: 0.98rem;
+    margin: 14px auto 0;
+    max-width: 340px;
+    line-height: 1.6;
+  }
+
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 34px;
+  }
+  .hero-stat { text-align: center; }
+  .hero-stat .num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--orange-light);
+  }
+  .hero-stat .label {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .hero-divider {
+    width: 1px;
+    background: var(--card-border);
+  }
+
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 34px;
+  }
+  .hero-stat { text-align: center; }
+  .hero-stat .num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--orange-light);
+  }
+  .hero-stat .label {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .hero-divider {
+    width: 1px;
+    background: var(--card-border);
+  }
+
+  /* GRID */
+  .section-label {
+    max-width: 900px;
+    margin: 40px auto 14px;
+    padding: 0 20px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .home-grid {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 16px 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .home-card {
+    position: relative;
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    padding: 22px 18px;
+    text-decoration: none;
+    display: block;
+    overflow: hidden;
+    transition: transform .2s, border-color .2s, box-shadow .2s;
+  }
+  .home-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(140deg, rgba(255,94,0,0.10), transparent 55%);
+    opacity: 0;
+    transition: opacity .2s;
+  }
+  .home-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--orange);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.4);
+  }
+  .home-card:hover::before { opacity: 1; }
+  .home-card-icon { font-size: 1.7rem; margin-bottom: 10px; display: block; }
+  .home-card-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .home-card-desc { font-size: 0.78rem; color: var(--muted); margin-top: 4px; line-height: 1.4; }
+  .home-card.full { grid-column: span 2; display: flex; align-items: center; gap: 14px; }
+  .home-card.full .home-card-icon { margin-bottom: 0; font-size: 1.9rem; }
+
+  footer {
+    text-align: center;
+    padding: 26px 20px;
+    border-top: 1px solid #1a1a1a;
+    color: var(--muted);
+    font-size: 0.76rem;
+    line-height: 1.7;
+  }
+  footer span { color: var(--orange); }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">CHINESELOUD<span>.FF.GUIDE</span></a>
+    <ul class="nav-links">
+      <li><a href="characters.html">Characters</a></li>
+      <li><a href="weapons.html">Weapons</a></li>
+      <li><a href="sensitivity.html">Sensitivity</a></li>
+      <li><a href="strategies.html">Strategies</a></li>
+      <li><a href="ranktips.html">Rank Tips</a></li>
+      <li><a href="maps.html">Maps</a></li>
+      <li><a href="news.html">News</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-mark">X</div>
+  <div class="hero-title">Chineseloud<em>.ff.guide</em></div>
+  <p class="hero-sub">Everything you need to win — characters, weapons, sensitivity, maps and strategy, all in one place.</p>
+
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="num">80+</div><div class="label">Characters &amp; Weapons</div></div>
+    <div class="hero-divider"></div>
+    <div class="hero-stat"><div class="num">6</div><div class="label">Maps Covered</div></div>
+  </div>
+</div>
+
+<div class="section-label">Browse the guide</div>
+<div class="home-grid">
+  <a class="home-card" href="characters.html">
+    <span class="home-card-icon">🧍</span>
+    <div class="home-card-title">Characters</div>
+    <div class="home-card-desc">Best characters, skills & combos</div>
+  </a>
+  <a class="home-card" href="weapons.html">
+    <span class="home-card-icon">🔫</span>
+    <div class="home-card-title">Weapons</div>
+    <div class="home-card-desc">Best weapon combos explained</div>
+  </a>
+  <a class="home-card" href="sensitivity.html">
+    <span class="home-card-icon">📱</span>
+    <div class="home-card-title">Sensitivity</div>
+    <div class="home-card-desc">Settings for every device</div>
+  </a>
+  <a class="home-card" href="ranktips.html">
+    <span class="home-card-icon">🏆</span>
+    <div class="home-card-title">Rank Tips</div>
+    <div class="home-card-desc">BR, CS & all game modes</div>
+  </a>
+  <a class="home-card" href="strategies.html">
+    <span class="home-card-icon">⚔️</span>
+    <div class="home-card-title">Strategies</div>
+    <div class="home-card-desc">Playstyles, CS & BR ranked</div>
+  </a>
+  <a class="home-card" href="maps.html">
+    <span class="home-card-icon">🗺️</span>
+    <div class="home-card-title">Maps</div>
+    <div class="home-card-desc">Landing spots for every map</div>
+  </a>
+  <a class="home-card full" href="news.html">
+    <span class="home-card-icon">📰</span>
+    <div>
+      <div class="home-card-title">News</div>
+      <div class="home-card-desc">Esports, updates, collabs & rewards</div>
+    </div>
+  </a>
+</div>
+
+<footer>Made with ❤️ by <span>Chineseloud</span><br>© 2026 Chineseloud. This site is a fan-made guide and not affiliated with Garena.</footer>
+</body>
+</html>
