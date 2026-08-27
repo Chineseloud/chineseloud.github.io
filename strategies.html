@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Strategies - Chineseloud Guide</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background-color: #0a0a0a; color: white; font-family: Arial; }
+.header { background: linear-gradient(90deg, #ff4400, #ff8800); padding: 20px; text-align: center; }
+.header h1 { font-size: 24px; letter-spacing: 3px; }
+.back { display: inline-block; margin: 16px; color: #ff8800; text-decoration: none; border: 1px solid #ff8800; padding: 6px 14px; border-radius: 20px; font-size: 13px; }
+
+.tabs { display: flex; margin: 16px; gap: 10px; }
+.tab {
+  flex: 1;
+  padding: 12px 6px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid #ff4400;
+  background: #1a1a1a;
+  color: #ff8800;
+}
+.tab.active { background: #ff4400; color: white; }
+.content { display: none; padding: 0 16px 20px; }
+.content.active { display: block; }
+
+.strategy { background: #1a1a1a; border: 1px solid #ff4400; border-radius: 12px; padding: 18px; margin-bottom: 12px; }
+.strategy h2 { color: #ff8800; margin-bottom: 6px; }
+.strategy p { color: #aaa; font-size: 13px; line-height: 1.6; margin-bottom: 8px; }
+.tag { display: inline-block; background: #ff4400; color: white; font-size: 11px; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; }
+.tip { color: #ff8800; font-size: 13px; margin-top: 8px; }
+
+.rank-desc { color: #aaa; font-size: 13px; margin-bottom: 14px; line-height: 1.5; }
+.rank-card { background: #1a1a1a; border: 1px solid #333; border-left: 3px solid #ff4400; border-radius: 10px; padding: 14px; margin-bottom: 10px; }
+.rank-num { display: inline-block; background: #ff4400; color: white; font-size: 10px; font-weight: bold; padding: 2px 8px; border-radius: 10px; margin-bottom: 6px; }
+.rank-card h3 { color: #ff8800; font-size: 15px; margin-bottom: 2px; }
+.rank-card .rank-name { color: #ff4400; font-size: 12px; font-weight: bold; margin-bottom: 4px; }
+.rank-card p { color: #aaa; font-size: 13px; line-height: 1.5; }
+
+.tips-box {
+  background: #111;
+  border-left: 3px solid #ff8800;
+  padding: 12px 16px;
+  margin-top: 6px;
+  font-size: 13px;
+  color: #aaa;
+  line-height: 1.7;
+  border-radius: 0 8px 8px 0;
+}
+.tips-box b { color: #ff8800; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>⚔️ STRATEGIES GUIDE</h1>
+</div>
+<a class="back" href="index.html">← Back to Home</a>
+
+<div class="tabs">
+  <div class="tab active" onclick="showTab('playstyles', this)">🎮 Playstyles</div>
+  <div class="tab" onclick="showTab('cs', this)">⚡ CS Ranked</div>
+  <div class="tab" onclick="showTab('br', this)">🗺️ BR Ranked</div>
+</div>
+
+<!-- PLAYSTYLES (original content) -->
+<div class="content active" id="playstyles">
+
+<div class="strategy">
+  <div class="tag">Aggressive</div>
+  <h2>🏃 Rusher</h2>
+  <p>Always push enemies fast. Don't give them time to heal or reload. Use gloo walls to cover yourself while pushing.</p>
+  <p class="tip">Best characters: Chrono, Skyler, Over</p>
+  <p class="tip">Best weapons: M1887, MP40</p>
+</div>
+
+<div class="strategy">
+  <div class="tag">Passive</div>
+  <h2>🏕️ Camper</h2>
+  <p>Find a safe position and wait for enemies to come to you. Use houses and rocks for cover. Let enemies make mistakes.</p>
+  <p class="tip">Best characters: Maro, Antonio</p>
+  <p class="tip">Best weapons: AWM, SKS</p>
+</div>
+
+<div class="strategy">
+  <div class="tag">Long Range</div>
+  <h2>🎯 Sniper</h2>
+  <p>Stay far from enemies. Use high ground positions. Aim for headshots. Move after every shot so enemies can't find you.</p>
+  <p class="tip">Best characters: Maro, Rafael</p>
+  <p class="tip">Best weapons: AWM, Kar98</p>
+</div>
+
+<div class="strategy">
+  <div class="tag">Team Player</div>
+  <h2>🤝 Support</h2>
+  <p>Focus on keeping your squad alive. Always carry medkits. Revive teammates quickly. Use characters with healing abilities.</p>
+  <p class="tip">Best characters: Alok, Dimitri, Thiva</p>
+  <p class="tip">Best weapons: Any assault rifle</p>
+</div>
+
+<div class="strategy">
+  <div class="tag">Balanced</div>
+  <h2>👑 All Rounder</h2>
+  <p>Can adapt to any situation. Good for ranked mode. Switch between rushing and camping depending on the zone.</p>
+  <p class="tip">Best characters: Alok, Chrono</p>
+  <p class="tip">Best weapons: AK + SKS combo</p>
+</div>
+
+</div>
+
+<!-- CS RANKED -->
+<div class="content" id="cs">
+<div class="rank-desc">Clash Squad — short rounds, 4 vs 4, you buy guns, no revive.</div>
+
+<div class="rank-card"><div class="rank-num">Strategy 1</div><h3>Eco Rush Round 1-2</h3><div class="rank-name">Save Money First</div><p>In round 1 and 2, don't buy expensive guns. Use pistol and grenade and rush together. This lets you buy full guns and armor in round 3. Buying early leaves you poor later.</p></div>
+
+<div class="rank-card"><div class="rank-num">Strategy 2</div><h3>Fake One Side, Attack Other Side</h3><div class="rank-name">Confuse Enemy</div><p>Send 3 players to A site. Send 1 player to make noise at B site. The enemy thinks everyone is at B, so your 3 players can attack A fast and break their defense.</p></div>
+
+<div class="rank-card"><div class="rank-num">Strategy 3</div><h3>Use Gloo Wall Before Peeking</h3><div class="rank-name">Stay Safe</div><p>Before you go out to shoot, throw a gloo wall first. Then quickly look from the side of the wall and shoot, so enemies can't see and kill you fast.</p></div>
+
+<div class="rank-card"><div class="rank-num">Strategy 4</div><h3>Save Your Gun If You Will Lose</h3><div class="rank-name">Don't Waste Money</div><p>Example: it's 2 vs 4 and you have low HP. Don't die and lose your gun — run away and save it. Next round you'll have money to buy a full set again.</p></div>
+
+<div class="rank-card"><div class="rank-num">Strategy 5</div><h3>After Planting Bomb, Spread Out</h3><div class="rank-name">Hold All Angles</div><p>After planting the bomb, don't stay together. One player watches the close door, one watches the middle, one watches where the enemy can come from — so a single grenade can't kill you all.</p></div>
+
+</div>
+
+<!-- BR RANKED -->
+<div class="content" id="br">
+<div class="rank-desc">Battle Royale — big map, 50 players, you loot, and you can revive teammates.</div>
+
+<div class="rank-card"><div class="rank-num">Strategy 1</div><h3>Drop Hot Place or Quiet Place</h3><div class="rank-name">Loot Fast</div><p>Don't drop in middle places. Either drop Clock Tower or Factory to fight early, or drop far houses with no one to loot peacefully. Middle drops usually mean you die with no gun.</p></div>
+
+<div class="rank-card"><div class="rank-num">Strategy 2</div><h3>Let Other Teams Fight First</h3><div class="rank-name">Be The 3rd Team</div><p>When you hear 2 squads fighting, don't run in first. Wait until they both have low HP, then push and kill them easily. This is called 3rd partying.</p></div>
+
+<div class="rank-card"><div class="rank-num">Strategy 3</div><h3>Take Car Early To Rotate</h3><div class="rank-name">Don't Die In Zone</div><p>In the first 2 minutes, find a car. When the zone is about to close, drive early — don't wait till the last second, or you'll get shot while running in the open.</p></div>
+
+<div class="rank-card"><div class="rank-num">Strategy 4</div><h3>Use 3 Gloo Walls In A Fight</h3><div class="rank-name">3 Wall Rule</div><p>Wall 1 to hide from bullets, Wall 2 to climb up high, Wall 3 to run to a new place. Never fight in an open field without a wall.</p></div>
+
+<div class="rank-card"><div class="rank-num">Strategy 5</div><h3>Last Zone: Take House On Hill</h3><div class="rank-name">Play High Ground</div><p>When only 3-4 teams are left, find a house on top of a hill. Stay inside, shoot from windows, throw grenades, and let other teams fight each other below you.</p></div>
+
+<div class="tips-box">
+  💡 <b>Simple Tip For You:</b><br>
+  • If you like to <b>Rush</b>: use CS Strategy #2 and BR Strategy #2<br>
+  • If you like to <b>Camp</b>: use CS Strategy #5 and BR Strategy #5
+</div>
+
+</div>
+
+<script>
+function showTab(id, btn) {
+  document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+
+</body>
+</html>
