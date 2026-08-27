@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sensitivity - Chineseloud Guide</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background-color: #0a0a0a; color: white; font-family: Arial; }
+.header { background: linear-gradient(90deg, #ff4400, #ff8800); padding: 20px; text-align: center; }
+.header h1 { font-size: 24px; letter-spacing: 3px; }
+.back { display: inline-block; margin: 16px; color: #ff8800; text-decoration: none; border: 1px solid #ff8800; padding: 6px 14px; border-radius: 20px; font-size: 13px; }
+
+.tabs { display: flex; margin: 16px; gap: 10px; }
+.tab {
+  flex: 1;
+  padding: 12px 6px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid #ff4400;
+  background: #1a1a1a;
+  color: #ff8800;
+}
+.tab.active { background: #ff4400; color: white; }
+.content { display: none; padding: 0 16px 20px; }
+.content.active { display: block; }
+
+.device { background: #1a1a1a; border: 1px solid #ff4400; border-radius: 12px; padding: 18px; margin-bottom: 12px; }
+.device h2 { color: #ff8800; margin-bottom: 6px; }
+.device p.desc { color: #aaa; font-size: 12px; margin-bottom: 12px; }
+.setting { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #333; font-size: 13px; }
+.setting span { color: #ff8800; font-weight: bold; }
+.tag { display: inline-block; background: #ff4400; color: white; font-size: 11px; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; }
+.device-tip { color: #ff8800; font-size: 12px; margin-top: 10px; line-height: 1.5; }
+
+.tip { background: #111; border-left: 3px solid #ff8800; padding: 12px 16px; margin: 16px; font-size: 13px; color: #aaa; line-height: 1.7; border-radius: 0 8px 8px 0; }
+.tip b { color: #ff8800; }
+.tip ol { margin-left: 18px; margin-top: 4px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>📱 SENSITIVITY GUIDE</h1>
+</div>
+<a class="back" href="index.html">← Back to Home</a>
+
+<div class="tabs">
+  <div class="tab active" onclick="showTab('general', this)">⚙️ General</div>
+  <div class="tab" onclick="showTab('tecno', this)">🔵 Tecno</div>
+  <div class="tab" onclick="showTab('infinix', this)">🟠 Infinix</div>
+</div>
+
+<!-- GENERAL (original content) -->
+<div class="content active" id="general">
+
+<div class="device">
+  <div class="tag">Tecno/Infinix 2-3GB RAM</div>
+  <h2>Low End Phones</h2>
+  <p class="desc">Balanced settings for beginners</p>
+  <div class="setting"><p>General</p><span>85-90</span></div>
+  <div class="setting"><p>Red Dot</p><span>75-80</span></div>
+  <div class="setting"><p>2x Scope</p><span>65-70</span></div>
+  <div class="setting"><p>4x Scope</p><span>55-60</span></div>
+  <div class="setting"><p>AWM/Sniper</p><span>30-35</span></div>
+  <div class="setting"><p>Free Look</p><span>50-60</span></div>
+</div>
+
+<div class="device">
+  <div class="tag">Samsung/Tecno 4GB RAM</div>
+  <h2>Mid Range Phones</h2>
+  <p class="desc">Best for headshots and ranked play</p>
+  <div class="setting"><p>General</p><span>120-140</span></div>
+  <div class="setting"><p>Red Dot</p><span>90-110</span></div>
+  <div class="setting"><p>2x Scope</p><span>70-85</span></div>
+  <div class="setting"><p>4x Scope</p><span>50-65</span></div>
+  <div class="setting"><p>AWM/Sniper</p><span>22-38</span></div>
+  <div class="setting"><p>Free Look</p><span>65-80</span></div>
+</div>
+
+<div class="device">
+  <div class="tag">Samsung/iPhone 6GB+ RAM</div>
+  <h2>High End Phones</h2>
+  <p class="desc">Aggressive one tap headshot settings</p>
+  <div class="setting"><p>General</p><span>190-195</span></div>
+  <div class="setting"><p>Red Dot</p><span>185-190</span></div>
+  <div class="setting"><p>2x Scope</p><span>170-175</span></div>
+  <div class="setting"><p>4x Scope</p><span>160-165</span></div>
+  <div class="setting"><p>AWM/Sniper</p><span>90-95</span></div>
+  <div class="setting"><p>Free Look</p><span>100-110</span></div>
+</div>
+
+</div>
+
+<!-- TECNO -->
+<div class="content" id="tecno">
+
+<div class="device">
+  <div class="tag">Pop 5 / 6 / 7 / 8 / 9 / 10 — 2-3GB RAM</div>
+  <h2>Tecno Pop Series</h2>
+  <p class="desc">Low RAM phones. Same sensitivity for all Pop models.</p>
+  <div class="setting"><p>General</p><span>88</span></div>
+  <div class="setting"><p>Red Dot</p><span>78</span></div>
+  <div class="setting"><p>2x Scope</p><span>68</span></div>
+  <div class="setting"><p>4x Scope</p><span>58</span></div>
+  <div class="setting"><p>Sniper Scope</p><span>32</span></div>
+  <div class="setting"><p>Camera</p><span>55</span></div>
+  <p class="device-tip">💡 Settings > Developer Options > Smallest Width = 380. Close all apps before playing.</p>
+</div>
+
+<div class="device">
+  <div class="tag">Spark 7 / 8 / 10 — 4GB RAM</div>
+  <h2>Tecno Spark Series</h2>
+  <div class="setting"><p>General</p><span>100</span></div>
+  <div class="setting"><p>Red Dot</p><span>90</span></div>
+  <div class="setting"><p>2x Scope</p><span>75</span></div>
+  <div class="setting"><p>4x Scope</p><span>60</span></div>
+  <div class="setting"><p>Sniper Scope</p><span>30</span></div>
+  <div class="setting"><p>Camera</p><span>65</span></div>
+  <p class="device-tip">💡 Use 2-thumb. Turn Graphics to Smooth + High FPS.</p>
+</div>
+
+<div class="device">
+  <div class="tag">Spark 20 / 30 / 30C — 6-8GB RAM</div>
+  <h2>Tecno Spark Series</h2>
+  <div class="setting"><p>General</p><span>130</span></div>
+  <div class="setting"><p>Red Dot</p><span>105</span></div>
+  <div class="setting"><p>2x Scope</p><span>80</span></div>
+  <div class="setting"><p>4x Scope</p><span>62</span></div>
+  <div class="setting"><p>Sniper Scope</p><span>28</span></div>
+  <div class="setting"><p>Camera</p><span>75</span></div>
+  <p class="device-tip">💡 Can use 4-finger claw + Gyro. This one is fast.</p>
+</div>
+
+<div class="device">
+  <div class="tag">Camon 17 / 18 / 19 / 20 / 30 — 6-8GB RAM</div>
+  <h2>Tecno Camon Series</h2>
+  <p class="desc">Camera phones. Same sensitivity for all Camon models.</p>
+  <div class="setting"><p>General</p><span>120</span></div>
+  <div class="setting"><p>Red Dot</p><span>100</span></div>
+  <div class="setting"><p>2x Scope</p><span>78</span></div>
+  <div class="setting"><p>4x Scope</p><span>60</span></div>
+  <div class="setting"><p>Sniper Scope</p><span>29</span></div>
+  <div class="setting"><p>Camera</p><span>70</span></div>
+  <p class="device-tip">💡 Good touch response. Use this for headshot drag.</p>
+</div>
+
+</div>
+
+<!-- INFINIX -->
+<div class="content" id="infinix">
+
+<div class="device">
+  <div class="tag">Smart 6 / 7 / 8 / 9 / 10</div>
+  <h2>Infinix Smart Series</h2>
+  <p class="desc">Budget phones. Same sensitivity for all Smart models.</p>
+  <div class="setting"><p>General</p><span>86</span></div>
+  <div class="setting"><p>Red Dot</p><span>72</span></div>
+  <div class="setting"><p>2x Scope</p><span>62</span></div>
+  <div class="setting"><p>4x Scope</p><span>52</span></div>
+  <div class="setting"><p>Sniper Scope</p><span>27</span></div>
+  <div class="setting"><p>Camera</p><span>50</span></div>
+  <p class="device-tip">💡 Smallest Width = 390. Don't use HD graphics.</p>
+</div>
+
+<div class="device">
+  <div class="tag">Hot 10 / 11 / 12 — 4-6GB RAM</div>
+  <h2>Infinix Hot Series</h2>
+  <div class="setting"><p>General</p><span>95</span></div>
+  <div class="setting"><p>Red Dot</p><span>85</span></div>
+  <div class="setting"><p>2x Scope</p><span>70</span></div>
+  <div class="setting"><p>4x Scope</p><span>57</span></div>
+  <div class="setting"><p>Sniper Scope</p><span>30</span></div>
+  <div class="setting"><p>Camera</p><span>60</span></div>
+</div>
+
+<div class="device">
+  <div class="tag">Hot 20 / 30 / 40 — 8GB RAM</div>
+  <h2>Infinix Hot Series</h2>
+  <div class="setting"><p>General</p><span>125</span></div>
+  <div class="setting"><p>Red Dot</p><span>102</span></div>
+  <div class="setting"><p>2x Scope</p><span>79</span></div>
+  <div class="setting"><p>4x Scope</p><span>61</span></div>
+  <div class="setting"><p>Sniper Scope</p><span>28</span></div>
+  <div class="setting"><p>Camera</p><span>72</span></div>
+  <p class="device-tip">💡 Hot 30/40 can handle 3-finger + gyro.</p>
+</div>
+
+<div class="device">
+  <div class="tag">Note 10 / 11 / 12 / 30 / 40</div>
+  <h2>Infinix Note Series</h2>
+  <p class="desc">Gaming phones. Same sensitivity for all Note models.</p>
+  <div class="setting"><p>General</p><span>135</span></div>
+  <div class="setting"><p>Red Dot</p><span>110</span></div>
+  <div class="setting"><p>2x Scope</p><span>85</span></div>
+  <div class="setting"><p>4x Scope</p><span>65</span></div>
+  <div class="setting"><p>Sniper Scope</p><span>26</span></div>
+  <div class="setting"><p>Camera</p><span>78</span></div>
+  <p class="device-tip">💡 Best for Tecno/Infinix. Use Gyro 80-100.</p>
+</div>
+
+</div>
+
+<div class="tip">
+  💡 <b>How To Test Your Sensitivity:</b>
+  <ol>
+    <li>Go to Training Ground</li>
+    <li>Pick MP40 + Red Dot</li>
+    <li>Spray a wall — if bullets go up, increase Red Dot by 2</li>
+    <li>If the screen shakes too much, decrease by 2</li>
+  </ol>
+</div>
+
+<script>
+function showTab(id, btn) {
+  document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+
+</body>
+</html>
