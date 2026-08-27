@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rank Tips - Chineseloud Guide</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background-color: #0a0a0a; color: white; font-family: Arial; }
+.header { background: linear-gradient(90deg, #ff4400, #ff8800); padding: 20px; text-align: center; }
+.header h1 { font-size: 24px; letter-spacing: 3px; }
+.back { display: inline-block; margin: 16px; color: #ff8800; text-decoration: none; border: 1px solid #ff8800; padding: 6px 14px; border-radius: 20px; font-size: 13px; }
+.tabs {
+  display: flex;
+  margin: 16px;
+  gap: 10px;
+}
+.tab {
+  flex: 1;
+  padding: 14px 6px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid #ff4400;
+  background: #1a1a1a;
+  color: #ff8800;
+}
+.tab.active {
+  background: #ff4400;
+  color: white;
+}
+.content { display: none; }
+.content.active { display: block; }
+.section { background: #1a1a1a; border: 1px solid #ff4400; border-radius: 12px; padding: 18px; margin: 12px 16px; }
+.section h2 { color: #ff8800; margin-bottom: 10px; font-size: 16px; }
+.section p { color: #aaa; font-size: 13px; line-height: 1.8; margin-bottom: 6px; }
+.tag { display: inline-block; background: #ff4400; color: white; font-size: 11px; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; }
+.tip { color: #ff8800; font-size: 13px; }
+
+/* Game Modes styles */
+.mode-group-title { color: #ff8800; font-size: 16px; letter-spacing: 1px; margin: 16px 16px 8px; border-bottom: 1px solid #ff4400; padding-bottom: 8px; }
+.mode-group-desc { color: #aaa; font-size: 12px; margin: 0 16px 10px; }
+.mode-card { background: #1a1a1a; border: 1px solid #333; border-left: 3px solid #ff4400; border-radius: 10px; padding: 14px; margin: 0 16px 10px; }
+.mode-card h3 { color: #ff8800; font-size: 15px; margin-bottom: 2px; }
+.mode-card .players { color: #ff4400; font-size: 11px; font-weight: bold; margin-bottom: 6px; }
+.mode-card .how { color: #ff8800; font-size: 12px; font-weight: bold; margin-bottom: 2px; }
+.mode-card p.desc { color: #aaa; font-size: 13px; line-height: 1.5; }
+
+.quick-table { margin: 16px; border: 1px solid #ff4400; border-radius: 10px; overflow: hidden; }
+.quick-row { display: flex; border-bottom: 1px solid #333; }
+.quick-row:last-child { border-bottom: none; }
+.quick-row .qleft { flex: 1; background: #1a1a1a; color: #ff8800; font-size: 13px; font-weight: bold; padding: 10px 12px; }
+.quick-row .qright { flex: 1.2; background: #141414; color: #aaa; font-size: 13px; padding: 10px 12px; }
+.quick-title { color: #ff8800; font-size: 15px; margin: 16px 16px 8px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🏆 RANK TIPS</h1>
+</div>
+<a class="back" href="index.html">← Back to Home</a>
+
+<div class="tabs">
+  <div class="tab active" onclick="showTab('br')">🗺️ BR</div>
+  <div class="tab" onclick="showTab('cs')">⚡ CS</div>
+  <div class="tab" onclick="showTab('modes')">🎮 Modes</div>
+</div>
+
+<!-- BR CONTENT -->
+<div class="content active" id="br">
+
+<div class="section">
+  <div class="tag">Landing</div>
+  <h2>📍 Best Landing Spots</h2>
+  <p>✅ <b>For rank push:</b> Land at edge locations like Rim Nam, Mars Electric, or 200m outside Clock Tower.</p>
+  <p>✅ <b>For kills:</b> Clock Tower, Peak, Factory. High risk but 4-6 kills early sets you up for top 3.</p>
+  <p class="tip">💡 Rule: If you're still punching at 30s, you landed too greedy!</p>
+</div>
+
+<div class="section">
+  <div class="tag">Fighting</div>
+  <h2>⚔️ When To Attack vs Wait</h2>
+  <p>✅ <b>Push when:</b> You have 3v1 or 4v2, enemy is healing, or you downed one and they're reviving.</p>
+  <p>✅ <b>Wait when:</b> You hear 2+ teams fighting, low on ammo or gloo walls, or zone is moving away.</p>
+  <p class="tip">💡 Placement beats kills. 1st place with 2 kills beats 5th with 8 kills!</p>
+</div>
+
+<div class="section">
+  <div class="tag">Squad</div>
+  <h2>🤝 Teammate Cooperation</h2>
+  <p>✅ Assign roles: IGL/Caller, Rusher, Support, Sniper.</p>
+  <p>✅ Good callout: "2 enemies, 60m, northeast rock" not "they're over there".</p>
+  <p class="tip">💡 Never loot a death box while teammate is fighting. Cover first!</p>
+</div>
+
+<div class="section">
+  <div class="tag">Zone</div>
+  <h2>🔵 Zone Tips</h2>
+  <p>✅ Rotate early: Start moving at 1:00 for circles 3-5.</p>
+  <p>✅ Play the edge of safe zone so only 180° can shoot you.</p>
+  <p>✅ High ground wins final 3 circles. Use 3-4 gloo walls in zig-zag.</p>
+</div>
+
+<div class="section">
+  <div class="tag">Pro Tips</div>
+  <h2>🔥 Other BR Tips</h2>
+  <p>✅ Meta guns: M1014/UMP close, AN94/SCAR mid, SVD/M82 long.</p>
+  <p>✅ Best combo: DJ Alok + K + Orion + Wolfrahh.</p>
+  <p class="tip">💡 Warm up 10 min in training. First game aim is always off!</p>
+</div>
+
+</div>
+
+<!-- CS CONTENT -->
+<div class="content" id="cs">
+
+<div class="section">
+  <div class="tag">Map Control</div>
+  <h2>📍 Map Control Tips</h2>
+  <p>✅ <b>Factory Bermuda:</b> Control mid with SMG rush. Take mid, cut rotations.</p>
+  <p>✅ <b>Clock Tower:</b> Hold B-site with 2, flank with 2. Don't all go one site.</p>
+  <p class="tip">💡 First 10s of buy phase decide the round!</p>
+</div>
+
+<div class="section">
+  <div class="tag">Fighting</div>
+  <h2>⚔️ When To Attack vs Wait</h2>
+  <p>✅ <b>Attack when:</b> You win pistol round, 4v3 advantage, or know exact enemy location.</p>
+  <p>✅ <b>Wait when:</b> You lost pistol round. Force-save, play time.</p>
+  <p class="tip">💡 Don't dry peek. No flash/gloo wall = giving free kills!</p>
+</div>
+
+<div class="section">
+  <div class="tag">Economy</div>
+  <h2>💰 Economy Management</h2>
+  <p>✅ 2 people die round 1? Everyone force-save round 2.</p>
+  <p>✅ Pistol round = M500 or G18.</p>
+  <p>✅ Round 2 = UMP if won, save if lost.</p>
+  <p>✅ Round 3+ = M4A1/AN94 + vest.</p>
+</div>
+
+<div class="section">
+  <div class="tag">Squad</div>
+  <h2>🤝 Teammate Cooperation</h2>
+  <p>✅ Roles: 1 entry SMG, 2 AR mid, 1 support with grenades/gloo walls.</p>
+  <p>✅ Call HP, location, gun after every fight: "50 HP, M4, A-site".</p>
+  <p class="tip">💡 Lose 2 rounds in a row? Timeout, reset, change strategy!</p>
+</div>
+
+<div class="section">
+  <div class="tag">Pro Tips</div>
+  <h2>🔥 Other CS Tips</h2>
+  <p>✅ CS is 70% crosshair placement, 30% movement.</p>
+  <p>✅ Use gloo walls to block angles, not to hide behind.</p>
+  <p>✅ Up 3v2 with 20s left? Play time, let bomb timer run.</p>
+</div>
+
+</div>
+
+<!-- GAME MODES -->
+<div class="content" id="modes">
+
+<div class="mode-group-title">🗺️ 1. Battle Royale Modes — Big Map</div>
+
+<div class="mode-card"><h3>Classic BR</h3><div class="players">50 Players</div><div class="how">How to play</div><p class="desc">Drop from plane, loot houses, find guns, stay in safe zone. Last team alive wins. You can revive teammates.</p></div>
+<div class="mode-card"><h3>Ranked BR</h3><div class="players">50 Players</div><div class="how">How to play</div><p class="desc">Same as Classic but you get rank points. Win = more points, lose = lose points. Goal is to reach Heroic.</p></div>
+<div class="mode-card"><h3>Lone Wolf BR (Solo)</h3><div class="players">1 Player</div><div class="how">How to play</div><p class="desc">Only you, no teammates. Drop, loot, fight 49 other solos. Last 1 alive wins.</p></div>
+<div class="mode-card"><h3>Duo BR</h3><div class="players">2 Players</div><div class="how">How to play</div><p class="desc">You + 1 friend vs 24 other teams. Work together — one loots, one watches. Revive each other.</p></div>
+<div class="mode-card"><h3>Squad BR</h3><div class="players">4 Players</div><div class="how">How to play</div><p class="desc">Full team. This is the main mode for rank. Have 1 rusher, 1 support, 1 sniper, 1 IGL to call.</p></div>
+
+<div class="mode-group-title">⚡ 2. Clash Squad Modes — Small Map</div>
+
+<div class="mode-card"><h3>Classic CS</h3><div class="players">4 vs 4</div><div class="how">How to play</div><p class="desc">7 rounds. Buy guns each round. First team to win 4 rounds wins. No revive. Plant bomb or kill all.</p></div>
+<div class="mode-card"><h3>Ranked CS</h3><div class="players">4 vs 4</div><div class="how">How to play</div><p class="desc">Same as Classic CS but you get CS rank points. This is the fastest way to Heroic.</p></div>
+<div class="mode-card"><h3>Lone Wolf CS (1v1)</h3><div class="players">2 Players</div><div class="how">How to play</div><p class="desc">Only you vs 1 enemy. First to win 5 rounds wins. No money, same guns. Pure aim.</p></div>
+<div class="mode-card"><h3>Lone Wolf Headshot</h3><div class="players">2 Players</div><div class="how">How to play</div><p class="desc">1 vs 1 but ONLY headshots count. Body shots do 0 damage. Best mode to practice aim.</p></div>
+<div class="mode-card"><h3>Big Head CS</h3><div class="players">4 vs 4</div><div class="how">How to play</div><p class="desc">Same as CS but everyone has a big head. Headshots are easier. Very funny and fast.</p></div>
+<div class="mode-card"><h3>Convoy Crunch</h3><div class="players">4 vs 4</div><div class="how">How to play</div><p class="desc">You are inside cars with guns. Drive and shoot the enemy car. Blow up their car to win the round.</p></div>
+<div class="mode-card"><h3>CS Gun King</h3><div class="players">4 vs 4</div><div class="how">How to play</div><p class="desc">Every round everyone gets the same random gun. No buying. Tests who is best with all guns.</p></div>
+
+<div class="mode-group-title">✨ 3. Special Event Modes — Limited Time</div>
+
+<div class="mode-card"><h3>Team Deathmatch (TDM)</h3><div class="players">4 vs 4</div><div class="how">How to play</div><p class="desc">First team to 40 kills wins. Instant respawn. No money. Just keep fighting.</p></div>
+<div class="mode-card"><h3>Rush Hour</h3><div class="players">4 vs 4</div><div class="how">How to play</div><p class="desc">Like CS but super fast. Only pistols and SMG. 3 rounds to win.</p></div>
+<div class="mode-card"><h3>Pet Rumble</h3><div class="players">4 vs 4</div><div class="how">How to play</div><p class="desc">CS but you can use 2 pets. Pets give extra skills in fight.</p></div>
+<div class="mode-card"><h3>Zombie Hunt</h3><div class="players">4 Players vs AI</div><div class="how">How to play</div><p class="desc">You 4 players vs zombies. Survive 10 waves. Collect money to buy guns. Don't die.</p></div>
+<div class="mode-card"><h3>Rampage</h3><div class="players">50 Players</div><div class="how">How to play</div><p class="desc">BR but everyone has special skills and monsters spawn. Kill monsters for loot.</p></div>
+
+<div class="quick-title">🎯 Quick Pick Guide</div>
+<div class="quick-table">
+  <div class="quick-row"><div class="qleft">Push Rank Fast</div><div class="qright">Ranked CS</div></div>
+  <div class="quick-row"><div class="qleft">Practice Aim</div><div class="qright">Lone Wolf Headshot</div></div>
+  <div class="quick-row"><div class="qleft">Play With Friends</div><div class="qright">Squad BR or Classic CS</div></div>
+  <div class="quick-row"><div class="qleft">Play Alone</div><div class="qright">Lone Wolf BR</div></div>
+  <div class="quick-row"><div class="qleft">Have Fun</div><div class="qright">Big Head, Convoy Crunch</div></div>
+  <div class="quick-row"><div class="qleft">Fight Monsters</div><div class="qright">Zombie Hunt, Rampage</div></div>
+</div>
+
+</div>
+
+<script>
+function showTab(tab) {
+  document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(tab).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+
+</body>
+</html>
