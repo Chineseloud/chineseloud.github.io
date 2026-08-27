@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Characters - Chineseloud Guide</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background-color: #0a0a0a; color: white; font-family: Arial; }
+.header { background: linear-gradient(90deg, #ff4400, #ff8800); padding: 20px; text-align: center; }
+.header h1 { font-size: 24px; letter-spacing: 3px; }
+.back { display: inline-block; margin: 16px; color: #ff8800; text-decoration: none; border: 1px solid #ff8800; padding: 6px 14px; border-radius: 20px; font-size: 13px; }
+.categories { display: flex; flex-wrap: wrap; gap: 10px; padding: 16px; justify-content: center; }
+.cat-btn { background: #1a1a1a; border: 1.5px solid #ff4400; color: #ff8800; padding: 10px 16px; border-radius: 20px; font-size: 13px; cursor: pointer; font-weight: bold; }
+.cat-btn.active { background: #ff4400; color: white; }
+.content { display: none; padding: 0 16px 20px; }
+.content.active { display: block; }
+.category-title { font-size: 18px; color: #ff8800; margin: 16px 0 10px; letter-spacing: 2px; border-bottom: 1px solid #ff4400; padding-bottom: 8px; }
+.category-desc { color: #aaa; font-size: 13px; margin-bottom: 12px; }
+.character { background: #1a1a1a; border: 1px solid #333; border-radius: 10px; padding: 14px; margin-bottom: 10px; }
+.character h3 { color: #ff8800; font-size: 15px; margin-bottom: 4px; }
+.character .ability { color: #ff4400; font-size: 12px; font-weight: bold; margin-bottom: 4px; }
+.character p { color: #aaa; font-size: 13px; line-height: 1.5; }
+.tag { display: inline-block; background: #ff4400; color: white; font-size: 10px; padding: 2px 8px; border-radius: 10px; margin-bottom: 6px; }
+
+.sub-tabs { display: flex; gap: 10px; margin-bottom: 14px; }
+.sub-tab {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: bold;
+  border: 1.5px solid #ff4400;
+  background: #1a1a1a;
+  color: #ff8800;
+  cursor: pointer;
+}
+.sub-tab.active { background: #ff4400; color: white; }
+.sub-content { display: none; }
+.sub-content.active { display: block; }
+
+.combo-card {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-left: 3px solid #ff4400;
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 10px;
+}
+.combo-card .combo-num {
+  display: inline-block;
+  background: #ff4400;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-bottom: 6px;
+}
+.combo-card h3 { color: #ff8800; font-size: 15px; margin-bottom: 2px; }
+.combo-card .combo-name { color: #ff4400; font-size: 12px; font-weight: bold; margin-bottom: 4px; }
+.combo-card p { color: #aaa; font-size: 13px; line-height: 1.5; }
+
+.tips-box {
+  background: #111;
+  border-left: 3px solid #ff8800;
+  padding: 12px 16px;
+  margin-top: 6px;
+  font-size: 13px;
+  color: #aaa;
+  line-height: 1.7;
+  border-radius: 0 8px 8px 0;
+}
+.tips-box b { color: #ff8800; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>👤 CHARACTERS GUIDE</h1>
+</div>
+<a class="back" href="index.html">← Back to Home</a>
+
+<div class="categories">
+  <button class="cat-btn active" onclick="showCat('support', this)">💚 Support</button>
+  <button class="cat-btn" onclick="showCat('defensive', this)">🛡️ Defensive</button>
+  <button class="cat-btn" onclick="showCat('attacker', this)">⚔️ Attacker</button>
+  <button class="cat-btn" onclick="showCat('scout', this)">🔍 Scout</button>
+  <button class="cat-btn" onclick="showCat('balanced', this)">⚡ Balanced</button>
+  <button class="cat-btn" onclick="showCat('others', this)">🌟 Others</button>
+  <button class="cat-btn" onclick="showCat('active', this)">🎮 Active Skills</button>
+  <button class="cat-btn" onclick="showCat('passive', this)">🛡️ Passive Skills</button>
+  <button class="cat-btn" onclick="showCat('combos', this)">🔥 Best Combos</button>
+</div>
+
+<!-- SUPPORT -->
+<div class="content active" id="support">
+<div class="category-title">💚 SUPPORT / HEALER</div>
+<div class="character"><div class="tag">S-Tier</div><h3>Alok</h3><div class="ability">Drop the Beat</div><p>Creates a 5m aura giving +10% move speed and 5 HP/s heal for 5 seconds. Best support in the game.</p></div>
+<div class="character"><div class="tag">S-Tier</div><h3>Dimitri</h3><div class="ability">Healing Heartbeat</div><p>Creates healing zone that restores 10 HP/s and allows allies to auto-revive inside it.</p></div>
+<div class="character"><div class="tag">A-Tier</div><h3>K / Captain Rainbow</h3><div class="ability">Psych Professor</div><p>EP to HP conversion plus EP regen aura. Has 2 modes you can swap between.</p></div>
+<div class="character"><div class="tag">A-Tier</div><h3>Kapella</h3><div class="ability">Healing Song</div><p>Boosts healing items and skills. Slows ally HP loss when downed.</p></div>
+<div class="character"><div class="tag">A-Tier</div><h3>Thiva</h3><div class="ability">Vital Vibes</div><p>Revives teammates 70% faster and gives 60 HP on revive. Best for squad ranked.</p></div>
+<div class="character"><div class="tag">B-Tier</div><h3>Olivia</h3><div class="ability">Healing Touch</div><p>Revived allies receive extra HP when you revive them.</p></div>
+<div class="character"><div class="tag">B-Tier</div><h3>Notora</h3><div class="ability">Racer's Blessing</div><p>Heals the entire squad while riding in vehicles.</p></div>
+<div class="character"><div class="tag">B-Tier</div><h3>Maxim</h3><div class="ability">Gluttony</div><p>Uses medkits and mushrooms faster than other characters.</p></div>
+</div>
+
+<!-- DEFENSIVE -->
+<div class="content" id="defensive">
+<div class="category-title">🛡️ DEFENSIVE / TANK</div>
+<div class="character"><div class="tag">S-Tier</div><h3>Chrono</h3><div class="ability">Time Turner</div><p>Deploys a force field shield that blocks incoming damage and increases movement speed.</p></div>
+<div class="character"><div class="tag">A-Tier</div><h3>Kenta</h3><div class="ability">Swordsman's Wrath</div><p>Creates a frontal shield that blocks damage. Shield resets when you attack enemies.</p></div>
+<div class="character"><div class="tag">A-Tier</div><h3>Antonio</h3><div class="ability">Gangster's Spirit</div><p>Starts every match with extra HP above the normal maximum.</p></div>
+<div class="character"><div class="tag">B-Tier</div><h3>Andrew</h3><div class="ability">Armor Specialist</div><p>Reduces vest durability loss so your armor lasts longer in fights.</p></div>
+<div class="character"><div class="tag">B-Tier</div><h3>Nairi</h3><div class="ability">Ice Iron</div><p>Gloo walls become tougher and heal in cold environments.</p></div>
+<div class="character"><div class="tag">B-Tier</div><h3>Ford</h3><div class="ability">Iron Will</div><p>Reduces damage taken while outside the safe zone.</p></div>
+</div>
+
+<!-- ATTACKER -->
+<div class="content" id="attacker">
+<div class="category-title">⚔️ ATTACKER / RUSHER</div>
+<div class="character"><div class="tag">S-Tier</div><h3>Jota</h3><div class="ability">Sustained Raids</div><p>Restores 40 HP on SMG or Shotgun kill with 5 second cooldown. Best for aggressive rushers.</p></div>
+<div class="character"><div class="tag">A-Tier</div><h3>Xayne</h3><div class="ability">Xtreme Encounter</div><p>Instant shield burst plus kill-based HP recovery. Great for aggressive plays.</p></div>
+<div class="character"><div class="tag">A-Tier</div><h3>Hayato</h3><div class="ability">Bushido</div><p>Increases armor penetration as your HP drops. More dangerous when low health.</p></div>
+<div class="character"><div class="tag">A-Tier</div><h3>Jai</h3><div class="ability">Raging Reload</div><p>Automatically reloads magazine after knocking down an enemy.</p></div>
+<div class="character"><div class="tag">B-Tier</div><h3>Luqueta</h3><div class="ability">Hat Trick</div><p>Maximum HP increases with every kill. Gets stronger throughout the match.</p></div>
+<div class="character"><div class="tag">B-Tier</div><h3>Miguel</h3><div class="ability">Crazy Slayer</div><p>Gains EP per kill to sustain longer in fights.</p></div>
+<div class="character"><div class="tag">B-Tier</div><h3>Ryden</h3><div class="ability">Spider Drone</div><p>Slows and damages enemies. Reduces enemy movement speed by 80%.</p></div>
+</div>
+
+<!-- SCOUT -->
+<div class="content" id="scout">
+<div class="category-title">🔍 SCOUT / INTEL</div>
+<div class="character"><div class="tag">S-Tier</div><h3>Moco</h3><div class="ability">Hacker's Eye</div><p>Marks enemies you hit for 5 seconds and shares their location with your entire team.</p></div>
+<div class="character"><div class="tag">A-Tier</div><h3>Shirou</h3><div class="ability">Damage Delivery</div><p>Marks enemies that shoot you, revealing their location briefly.</p></div>
+<div class="character"><div class="tag">A-Tier</div><h3>Clu</h3><div class="ability">Tracing Steps</div><p>Reveals enemies who are not prone or crouching within range.</p></div>
+<div class="character"><div class="tag">B-Tier</div><h3>Otho</h3><div class="ability">Memory Mist</div><p>Shows nearby enemy locations after you get a kill.</p></div>
+</div>
+
+<!-- BALANCED -->
+<div class="content" id="balanced">
+<div class="category-title">⚡ BALANCED / UTILITY</div>
+<div class="character"><div class="tag">A-Tier</div><h3>D-Bee</h3><div class="ability">Bullet Beats</div><p>+30% move speed and +60% accuracy while moving and shooting simultaneously.</p></div>
+<div class="character"><div class="tag">A-Tier</div><h3>Maro</h3><div class="ability">Falcon Fervor</div><p>More damage at longer range. Bonus damage against marked enemies.</p></div>
+<div class="character"><div class="tag">A-Tier</div><h3>Leon</h3><div class="ability">Buzzer Beater</div><p>Regain 60 HP after surviving a fight with enemies.</p></div>
+<div class="character"><div class="tag">A-Tier</div><h3>Rafael</h3><div class="ability">Dead Silent</div><p>Gunshots are hidden on the minimap for 8 seconds when sniping.</p></div>
+<div class="character"><div class="tag">B-Tier</div><h3>Kelly</h3><div class="ability">Dash</div><p>Increases sprint speed by 6%. Simple but effective for rotation.</p></div>
+<div class="character"><div class="tag">B-Tier</div><h3>Dasha</h3><div class="ability">Partying On</div><p>Less recoil, 30% less fall damage, and faster recoil recovery.</p></div>
+<div class="character"><div class="tag">B-Tier</div><h3>Laura</h3><div class="ability">Sharp Shooter</div><p>+10% accuracy when using a scoped weapon.</p></div>
+<div class="character"><div class="tag">B-Tier</div><h3>Wukong</h3><div class="ability">Camouflage</div><p>Transforms into a bush for stealth. High cooldown but great for ambushes.</p></div>
+<div class="character"><div class="tag">B-Tier</div><h3>A124</h3><div class="ability">Thrill of Battle</div><p>Instantly converts EP to HP in emergency situations.</p></div>
+</div>
+
+<!-- OTHERS -->
+<div class="content" id="others">
+<div class="category-title">🌟 OTHERS / SPECIALISTS</div>
+<div class="character"><div class="tag">A-Tier</div><h3>Orion</h3><div class="ability">Crimson Crush</div><p>Absorbs incoming damage and converts it into damage against enemies.</p></div>
+<div class="character"><div class="tag">A-Tier</div><h3>Kairos</h3><div class="ability">Breaker Mode</div><p>Uses EP to deal more damage to shielded enemies or regenerate EP.</p></div>
+<div class="character"><div class="tag">B-Tier</div><h3>Sonia</h3><div class="ability">Nano Shield</div><p>Creates a nano shield for protection in tight situations.</p></div>
+<div class="character"><div class="tag">B-Tier</div><h3>Santino</h3><div class="ability">Shape Shift</div><p>Unique teleport and shape-shifting skill for unpredictable plays.</p></div>
+<div class="character"><div class="tag">B-Tier</div><h3>Homer</h3><div class="ability">Senses Shockwave</div><p>Slows enemies in an area, great for controlling fights.</p></div>
+</div>
+
+<!-- ACTIVE SKILLS -->
+<div class="content" id="active">
+<div class="category-title">🎮 ACTIVE SKILLS</div>
+<div class="category-desc">You tap to use them</div>
+
+<div class="character"><div class="tag">Active</div><h3>Alok</h3><div class="ability">Drop the Beat</div><p>Creates an area that increases movement speed and restores HP.</p></div>
+<div class="character"><div class="tag">Active</div><h3>Dimitri</h3><div class="ability">Healing Heartbeat</div><p>Creates a healing zone that restores HP and can revive teammates.</p></div>
+<div class="character"><div class="tag">Active</div><h3>K</h3><div class="ability">Psych Professor</div><p>Switch between EP conversion and EP regeneration modes.</p></div>
+<div class="character"><div class="tag">Active</div><h3>Chrono</h3><div class="ability">Time Turner</div><p>Creates a force field that blocks damage.</p></div>
+<div class="character"><div class="tag">Active</div><h3>Wukong</h3><div class="ability">Camouflage</div><p>Turns into a bush after knocking down an enemy.</p></div>
+<div class="character"><div class="tag">Active</div><h3>Xayne</h3><div class="ability">Xtreme Encounter</div><p>Gains shield and increased damage for a short time.</p></div>
+<div class="character"><div class="tag">Active</div><h3>Ignis</h3><div class="ability">Wall of Flame</div><p>Creates a wall of fire that damages enemies.</p></div>
+<div class="character"><div class="tag">Active</div><h3>Tatsuya</h3><div class="ability">Rebel Rush</div><p>Dashes forward quickly.</p></div>
+<div class="character"><div class="tag">Active</div><h3>Homer</h3><div class="ability">Magnetic Trap</div><p>Slows enemies and pulls them together.</p></div>
+<div class="character"><div class="tag">Active</div><h3>Orion</h3><div class="ability">Crimson Scare</div><p>Absorbs damage and converts it into attack power.</p></div>
+<div class="character"><div class="tag">Active</div><h3>Tsunami</h3><div class="ability">Surfing Time</div><p>Creates a water shield and boosts movement.</p></div>
+<div class="character"><div class="tag">Active</div><h3>Sonia</h3><div class="ability">Shape Shift</div><p>Teleports a short distance and leaves a decoy.</p></div>
+</div>
+
+<!-- PASSIVE SKILLS -->
+<div class="content" id="passive">
+<div class="category-title">🛡️ PASSIVE SKILLS</div>
+<div class="category-desc">Always on</div>
+
+<div class="character"><div class="tag">Passive</div><h3>Kapella</h3><div class="ability">Healing Song</div><p>Increases healing from items and slows HP loss when downed.</p></div>
+<div class="character"><div class="tag">Passive</div><h3>Thiva</h3><div class="ability">Vital Vibes</div><p>Revives teammates faster and gives HP on revive.</p></div>
+<div class="character"><div class="tag">Passive</div><h3>Olivia</h3><div class="ability">Healing Touch</div><p>Gives extra HP to allies when you revive them.</p></div>
+<div class="character"><div class="tag">Passive</div><h3>Notora</h3><div class="ability">Racer's Blessing</div><p>Restores HP to teammates while riding in vehicles.</p></div>
+<div class="character"><div class="tag">Passive</div><h3>A124</h3><div class="ability">Thrill of Battle</div><p>Converts EP into HP.</p></div>
+<div class="character"><div class="tag">Passive</div><h3>Andrew</h3><div class="ability">Wolf Pack</div><p>Reduces armor durability loss.</p></div>
+<div class="character"><div class="tag">Passive</div><h3>Antonio</h3><div class="ability">Gangster's Spirit</div><p>Starts the match with extra HP.</p></div>
+<div class="character"><div class="tag">Passive</div><h3>Moco</h3><div class="ability">Eye of the Hawk</div><p>Marks enemies you shoot so teammates can see them.</p></div>
+<div class="character"><div class="tag">Passive</div><h3>Hayato</h3><div class="ability">Bushido</div><p>Increases armor penetration when HP is low.</p></div>
+<div class="character"><div class="tag">Passive</div><h3>Jota</h3><div class="ability">Sustained Raids</div><p>Restores HP when hitting enemies with guns.</p></div>
+<div class="character"><div class="tag">Passive</div><h3>Luqueta</h3><div class="ability">Hat Trick</div><p>Increases max HP with each kill.</p></div>
+<div class="character"><div class="tag">Passive</div><h3>D-Bee</h3><div class="ability">Bullet Beats</div><p>Increases movement speed and accuracy while firing while moving.</p></div>
+<div class="character"><div class="tag">Passive</div><h3>Shiro</h3><div class="ability">Damage Delivered</div><p>Marks enemies who shoot you.</p></div>
+<div class="character"><div class="tag">Passive</div><h3>Clu</h3><div class="ability">Tracing Steps</div><p>Reveals nearby enemies who are not crouching.</p></div>
+<div class="character"><div class="tag">Passive</div><h3>Wolfrahh</h3><div class="ability">Limelight</div><p>Takes reduced damage and deals more damage to marked enemies.</p></div>
+<div class="character"><div class="tag">Passive</div><h3>Kelly</h3><div class="ability">Dash</div><p>Increases sprinting speed.</p></div>
+<div class="character"><div class="tag">Passive</div><h3>Rafael</h3><div class="ability">Dead Silent</div><p>Hides gunshot sound on minimap and restores HP on knock.</p></div>
+<div class="character"><div class="tag">Passive</div><h3>Laura</h3><div class="ability">Sharp Shooter</div><p>Increases accuracy while scoped.</p></div>
+<div class="character"><div class="tag">Passive</div><h3>Miguel</h3><div class="ability">Crazy Slayer</div><p>Gains EP after knocking down an enemy.</p></div>
+<div class="character"><div class="tag">Passive</div><h3>Caroline</h3><div class="ability">Agile</div><p>Increases movement speed while holding a shotgun.</p></div>
+</div>
+
+<!-- BEST COMBOS -->
+<div class="content" id="combos">
+<div class="category-title">🔥 BEST COMBOS</div>
+
+<div class="sub-tabs">
+  <div class="sub-tab active" onclick="showSub('rusher', this)">🏃 Rusher</div>
+  <div class="sub-tab" onclick="showSub('camper', this)">🏕️ Camper</div>
+</div>
+
+<!-- RUSHER COMBOS -->
+<div class="sub-content active" id="rusher">
+<div class="category-desc">Aggressive / Close Range — for players who push houses, WZ, and 1v4</div>
+
+<div class="combo-card"><div class="combo-num">Combo 1</div><h3>Wukong + Kelly + Moco + Jota</h3><div class="combo-name">Rush King</div><p>Turn to bush after knock, speed to push, mark enemies, heal on damage.</p></div>
+<div class="combo-card"><div class="combo-num">Combo 2</div><h3>Alok + Tatsuya + D-Bee + Hayato</h3><div class="combo-name">Speed + Heal</div><p>Drop the Beat for speed + heal, dash in, accurate while moving, more pen when low HP.</p></div>
+<div class="combo-card"><div class="combo-num">Combo 3</div><h3>Xayne + Sonia + Moco + Rafael</h3><div class="combo-name">Shield Rush</div><p>Shield + damage boost, teleport in, mark them, silent knock heal.</p></div>
+<div class="combo-card"><div class="combo-num">Combo 4</div><h3>K + Ignis + Andrew + Miguel</h3><div class="combo-name">EP Rush</div><p>EP to HP, wall of fire to push, less armor break, EP on knock.</p></div>
+</div>
+
+<!-- CAMPER COMBOS -->
+<div class="sub-content" id="camper">
+<div class="category-desc">Passive / Hold Angle — for players who hold buildings, snipe, and play zone</div>
+
+<div class="combo-card"><div class="combo-num">Combo 1</div><h3>Chrono + Kapella + Thiva + Olivia</h3><div class="combo-name">Team Healer</div><p>Force field to hold, more healing from items, fast revive, extra HP on revive.</p></div>
+<div class="combo-card"><div class="combo-num">Combo 2</div><h3>Dimitri + A124 + Antonio + Notora</h3><div class="combo-name">Tank Squad</div><p>Healing zone, convert EP to HP, extra start HP, heal in vehicle.</p></div>
+<div class="combo-card"><div class="combo-num">Combo 3</div><h3>Laura + Shiro + Clu + Wolfrahh</h3><div class="combo-name">Info Camper</div><p>More accurate scoped, mark shooters, see moving enemies, less damage taken.</p></div>
+<div class="combo-card"><div class="combo-num">Combo 4</div><h3>Luqueta + Caroline + Moco + Rafael</h3><div class="combo-name">HP Stacker</div><p>Max HP increases per kill, speed with shotgun, mark enemies, silent.</p></div>
+</div>
+
+<div class="tips-box">
+  💡 <b>Quick Tips:</b><br>
+  • <b>Rusher:</b> Pick 1 Active speed/attack + 2 damage/heal passives + 1 info passive<br>
+  • <b>Camper:</b> Pick 1 Active defense + 3 healing/survivability passives<br>
+  <script>
+function showCat(category, button) {
+  document.querySelectorAll('.content').forEach(function(content) {
+    content.classList.remove('active');
+  });
+
+  document.querySelectorAll('.cat-btn').forEach(function(btn) {
+    btn.classList.remove('active');
+  });
+
+  document.getElementById(category).classList.add('active');
+  button.classList.add('active');
+}
+
+function showSub(category, button) {
+  document.querySelectorAll('.sub-content').forEach(function(content) {
+    content.classList.remove('active');
+  });
+
+  document.querySelectorAll('.sub-tab').forEach(function(tab) {
+    tab.classList.remove('active');
+  });
+
+  document.getElementById(category).classList.add('active');
+  button.classList.add('active');
+}
+</script>
