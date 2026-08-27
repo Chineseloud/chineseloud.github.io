@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Maps - Chineseloud Guide</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background-color: #0a0a0a; color: white; font-family: Arial; }
+.header { background: linear-gradient(90deg, #ff4400, #ff8800); padding: 20px; text-align: center; }
+.header h1 { font-size: 24px; letter-spacing: 3px; }
+.back { display: inline-block; margin: 16px; color: #ff8800; text-decoration: none; border: 1px solid #ff8800; padding: 6px 14px; border-radius: 20px; font-size: 13px; }
+
+.map-select { display: flex; gap: 10px; overflow-x: auto; padding: 0 16px 16px; }
+.map-btn {
+  flex: 0 0 auto;
+  background: #1a1a1a;
+  border: 1.5px solid #ff4400;
+  color: #ff8800;
+  padding: 10px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.map-btn.active { background: #ff4400; color: white; }
+
+.map-panel { display: none; padding: 0 16px 20px; }
+.map-panel.active { display: block; }
+
+.map-note { color: #aaa; font-size: 12px; margin-bottom: 12px; }
+
+.zone-group-title { font-size: 15px; letter-spacing: 1px; margin: 14px 0 8px; padding-bottom: 6px; border-bottom: 1px solid #ff4400; }
+.zone-group-title.kill { color: #ff4400; }
+.zone-group-title.camp { color: #ff8800; }
+
+.zone-card { background: #1a1a1a; border: 1px solid #333; border-radius: 10px; padding: 14px; margin-bottom: 10px; }
+.zone-card.kill { border-left: 3px solid #ff4400; }
+.zone-card.camp { border-left: 3px solid #ff8800; }
+.zone-card h3 { color: #ff8800; font-size: 15px; margin-bottom: 4px; }
+.zone-card p { color: #aaa; font-size: 13px; line-height: 1.5; }
+
+.quick-title { color: #ff8800; font-size: 16px; margin: 20px 16px 10px; letter-spacing: 1px; }
+.quick-table { margin: 0 16px 16px; border: 1px solid #ff4400; border-radius: 10px; overflow: hidden; }
+.quick-head { display: flex; background: #ff4400; }
+.quick-head div { flex: 1; padding: 8px 10px; font-size: 11px; font-weight: bold; color: white; }
+.quick-row { display: flex; border-bottom: 1px solid #333; }
+.quick-row:last-child { border-bottom: none; }
+.quick-row div { flex: 1; padding: 10px; font-size: 12px; }
+.quick-row .qname { background: #1a1a1a; color: #ff8800; font-weight: bold; }
+.quick-row .qkill { background: #141414; color: #ff8080; }
+.quick-row .qcamp { background: #141414; color: #ffcf9e; }
+
+.tip-box { background: #111; border-left: 3px solid #ff8800; padding: 12px 16px; margin: 0 16px 20px; font-size: 13px; color: #aaa; line-height: 1.8; border-radius: 0 8px 8px 0; }
+.tip-box b { color: #ff8800; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🗺️ MAPS + LANDING GUIDE</h1>
+</div>
+<a class="back" href="index.html">← Back to Home</a>
+
+<div class="map-select">
+  <button class="map-btn active" onclick="showMap('bermuda', this)">Bermuda</button>
+  <button class="map-btn" onclick="showMap('remastered', this)">Bermuda Remastered</button>
+  <button class="map-btn" onclick="showMap('purgatory', this)">Purgatory</button>
+  <button class="map-btn" onclick="showMap('kalahari', this)">Kalahari</button>
+  <button class="map-btn" onclick="showMap('alpine', this)">Alpine</button>
+  <button class="map-btn" onclick="showMap('nexterra', this)">Nexterra</button>
+</div>
+
+<!-- BERMUDA -->
+<div class="map-panel active" id="bermuda">
+<div class="map-note">Classic Map</div>
+
+<div class="zone-group-title kill">🔥 Good For Killing / Rush</div>
+<div class="zone-card kill"><h3>Clock Tower</h3><p>3 houses + roof. Lots of guns. Everyone drops here. Die fast or get 5 kills.</p></div>
+<div class="zone-card kill"><h3>Factory</h3><p>Big building + lots of loot. 2-3 teams land here always.</p></div>
+<div class="zone-card kill"><h3>Pochinok</h3><p>Small but 3 teams land. Fast fights.</p></div>
+
+<div class="zone-group-title camp">🏕️ Good For Camping / Safe Loot</div>
+<div class="zone-card camp"><h3>Cape Town</h3><p>5 houses, usually empty. Loot peacefully.</p></div>
+<div class="zone-card camp"><h3>Shipyard</h3><p>Far edge. 1-2 teams max. Good cars.</p></div>
+<div class="zone-card camp"><h3>Mars Electric</h3><p>Quiet. 3 houses + zipline to rotate.</p></div>
+</div>
+
+<!-- BERMUDA REMASTERED -->
+<div class="map-panel" id="remastered">
+<div class="map-note">Same as Bermuda but updated.</div>
+
+<div class="zone-group-title kill">🔥 Good For Killing</div>
+<div class="zone-card kill"><h3>New Clock Tower</h3><p>Updated version of the classic hot drop. Still the most contested spot on the map.</p></div>
+<div class="zone-card kill"><h3>Rim Nam Village</h3><p>Dense houses close together. Great loot pulls in multiple squads early.</p></div>
+
+<div class="zone-group-title camp">🏕️ Good For Camping</div>
+<div class="zone-card camp"><h3>Observatory</h3><p>High ground with decent loot. Quiet start, good for holding angles later.</p></div>
+<div class="zone-card camp"><h3>Sentosa</h3><p>Edge location. Low traffic, safe place to gear up before rotating.</p></div>
+</div>
+
+<!-- PURGATORY -->
+<div class="map-panel" id="purgatory">
+<div class="map-note">Volcano Map</div>
+
+<div class="zone-group-title kill">🔥 Good For Killing / Rush</div>
+<div class="zone-card kill"><h3>Brasilia</h3><p>8 houses + center. Most teams land here.</p></div>
+<div class="zone-card kill"><h3>The Mill</h3><p>Big factory. Close range fights.</p></div>
+<div class="zone-card kill"><h3>Quarry</h3><p>2 teams fight for high ground.</p></div>
+
+<div class="zone-group-title camp">🏕️ Good For Camping / Safe Loot</div>
+<div class="zone-card camp"><h3>Command Post</h3><p>Edge of map. 4 houses. Very quiet.</p></div>
+<div class="zone-card camp"><h3>River Town</h3><p>Houses by water. Easy to escape with boat.</p></div>
+<div class="zone-card camp"><h3>Marshland</h3><p>3 houses. Nobody drops here.</p></div>
+</div>
+
+<!-- KALAHARI -->
+<div class="map-panel" id="kalahari">
+<div class="map-note">Desert Map</div>
+
+<div class="zone-group-title kill">🔥 Good For Killing / Rush</div>
+<div class="zone-card kill"><h3>Refinery</h3><p>Center of map. 4 buildings. Best loot = most fights.</p></div>
+<div class="zone-card kill"><h3>Communication Tower</h3><p>High ground. Snipers love it.</p></div>
+<div class="zone-card kill"><h3>Treasure Spot</h3><p>2 teams always fight here for the airdrop.</p></div>
+
+<div class="zone-group-title camp">🏕️ Good For Camping / Safe Loot</div>
+<div class="zone-card camp"><h3>Dam</h3><p>Far corner. 2 houses + vehicle.</p></div>
+<div class="zone-card camp"><h3>Radar Station</h3><p>Edge. 1 house but a good sniping spot.</p></div>
+<div class="zone-card camp"><h3>Ancient Ruin</h3><p>Quiet. Loot then rotate with zip line.</p></div>
+</div>
+
+<!-- ALPINE -->
+<div class="map-panel" id="alpine">
+<div class="map-note">Snow Map</div>
+
+<div class="zone-group-title kill">🔥 Good For Killing / Rush</div>
+<div class="zone-card kill"><h3>Sky Peak</h3><p>4 houses on a hill. Everyone fights here.</p></div>
+<div class="zone-card kill"><h3>Glacier</h3><p>Big base. 3 teams drop.</p></div>
+<div class="zone-card kill"><h3>Train Station</h3><p>Center + train. Fast action.</p></div>
+
+<div class="zone-group-title camp">🏕️ Good For Camping / Safe Loot</div>
+<div class="zone-card camp"><h3>Forge</h3><p>Edge. 3 houses. Good for AR players.</p></div>
+<div class="zone-card camp"><h3>Hanger</h3><p>Quiet. Vehicles spawn here.</p></div>
+<div class="zone-card camp"><h3>Outpost</h3><p>2 houses. Easy to hold.</p></div>
+</div>
+
+<!-- NEXTERRA -->
+<div class="map-panel" id="nexterra">
+<div class="map-note">Sci-fi Map</div>
+
+<div class="zone-group-title kill">🔥 Good For Killing / Rush</div>
+<div class="zone-card kill"><h3>Nexus</h3><p>Biggest city. 5 teams drop. Best loot in the game.</p></div>
+<div class="zone-card kill"><h3>Launch Pad</h3><p>Center. Fights in the open.</p></div>
+<div class="zone-card kill"><h3>Core Break</h3><p>High loot but no cover.</p></div>
+
+<div class="zone-group-title camp">🏕️ Good For Camping / Safe Loot</div>
+<div class="zone-card camp"><h3>Drift Yard</h3><p>Edge. 4 houses + cars.</p></div>
+<div class="zone-card camp"><h3>Bio Lab</h3><p>Quiet. Good for hiding.</p></div>
+<div class="zone-card camp"><h3>Power Plant</h3><p>2 teams max. Good rotate with Launch Pad.</p></div>
+</div>
+
+<div class="quick-title">📊 Quick Table: Kill vs Camp</div>
+<div class="quick-table">
+  <div class="quick-head"><div>Map</div><div>Best For Kills</div><div>Best For Camping</div></div>
+  <div class="quick-row"><div class="qname">Bermuda</div><div class="qkill">Clock Tower, Factory</div><div class="qcamp">Cape Town, Shipyard</div></div>
+  <div class="quick-row"><div class="qname">Purgatory</div><div class="qkill">Brasilia, The Mill</div><div class="qcamp">Command Post, River Town</div></div>
+  <div class="quick-row"><div class="qname">Kalahari</div><div class="qkill">Refinery, Tower</div><div class="qcamp">Dam, Radar Station</div></div>
+  <div class="quick-row"><div class="qname">Alpine</div><div class="qkill">Sky Peak, Glacier</div><div class="qcamp">Forge, Hanger</div></div>
+  <div class="quick-row"><div class="qname">Nexterra</div><div class="qkill">Nexus, Launch Pad</div><div class="qcamp">Drift Yard, Bio Lab</div></div>
+</div>
+
+<div class="tip-box">
+  💡 <b>Pro Tips:</b><br>
+  • <b>If you are good and want 10+ kills:</b> Drop hot — Clock Tower, Refinery, Nexus<br>
+  • <b>If you want to reach Heroic:</b> Drop edge — Cape Town, Dam, Drift Yard. Loot, then 3rd party.<br>
+  • <b>If you are new:</b> Drop 2nd house from the hot drop. Not center, not edge.
+</div>
+
+<script>
+function showMap(id, btn) {
+  document.querySelectorAll('.map-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.map-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+
+</body>
+</html>
