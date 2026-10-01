@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Free Fire Sensitivity Calculator | Chineseloud Guide</title>
+<meta name="description" content="Free Fire sensitivity calculator for Tecno, Infinix, Samsung, itel, iPhone, Huawei, Vivo and OPPO phones.">
+
+<style>
+*{box-sizing:border-box}
+
+body{
+    margin:0;
+    background:#0a0a0a;
+    color:#fff;
+    font-family:Arial,sans-serif;
+}
+
+header{
+    background:linear-gradient(90deg,#ff4400,#ff8800);
+    padding:22px;
+    text-align:center;
+}
+
+header h1{
+    margin:0;
+}
+
+header p{
+    margin:5px 0 0;
+}
+
+main{
+    max-width:1050px;
+    margin:auto;
+    padding:16px;
+}
+
+.back{
+    display:inline-block;
+    color:#ff8800;
+    border:1px solid #ff4400;
+    padding:8px 13px;
+    border-radius:7px;
+    text-decoration:none;
+    margin-bottom:16px;
+}
+
+.box,
+.intro{
+    background:#111;
+    border:1px solid #292929;
+    border-radius:12px;
+    padding:16px;
+    margin-bottom:18px;
+}
+
+.box{
+    border-color:#ff4400;
+}
+
+h2{
+    color:#ff8800;
+    text-align:center;
+}
+
+.sub,
+.note{
+    color:#999;
+    text-align:center;
+    font-size:13px;
+}
+
+label{
+    display:block;
+    color:#ff8800;
+    font-weight:bold;
+    margin:14px 0 6px;
+}
+
+select,
+input{
+    width:100%;
+    padding:13px;
+    background:#080808;
+    color:#fff;
+    border:1px solid #444;
+    border-radius:8px;
+    font-size:15px;
+}
+
+.brands,
+.styles,
+.tabs{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:7px;
+}
+
+button{
+    cursor:pointer;
+}
+
+.brand,
+.style,
+.tab{
+    padding:11px 5px;
+    background:#161616;
+    color:#ccc;
+    border:1px solid #444;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.brand.active,
+.style.active,
+.tab.active{
+    background:#ff4400;
+    color:#fff;
+    border-color:#ff8800;
+}
+
+.generate{
+    width:100%;
+    margin-top:18px;
+    padding:15px;
+    background:linear-gradient(90deg,#ff4400,#ff8800);
+    color:#fff;
+    border:0;
+    border-radius:8px;
+    font-weight:bold;
+    font-size:16px;
+}
+
+.result{
+    display:none;
+    margin-top:18px;
+    background:#080808;
+    border:1px solid #333;
+    border-radius:10px;
+    padding:14px;
+}
+
+.result.show{
+    display:block;
+}
+
+.result h3{
+    color:#ff8800;
+    text-align:center;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:8px;
+}
+
+.item{
+    background:#151515;
+    padding:11px;
+    text-align:center;
+    border-radius:7px;
+}
+
+.item span{
+    display:block;
+    color:#999;
+    font-size:12px;
+}
+
+.item b{
+    display:block;
+    color:#ff8800;
+    font-size:23px;
+    margin-top:4px;
+}
+
+.copy{
+    width:100%;
+    padding:12px;
+    margin-top:12px;
+    background:transparent;
+    color:#ff8800;
+    border:1px solid #ff4400;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.panel{
+    display:none;
+}
+
+.panel.show{
+    display:block;
+}
+
+.tablewrap{
+    overflow:auto;
+}
+
+table{
+    border-collapse:collapse;
+    width:100%;
+    min-width:760px;
+}
+
+th{
+    background:#ff4400;
+    padding:10px;
+}
+
+td{
+    padding:8px;
+    border-top:1px solid #292929;
+    text-align:center;
+}
+
+td:first-child{
+    text-align:left;
+    color:#ff8800;
+    font-weight:bold;
+}
+
+tr:nth-child(even){
+    background:#151515;
+}
+
+.tip{
+    border-left:4px solid #ff4400;
+    background:#111;
+    padding:13px;
+    color:#aaa;
+}
+
+@media(max-width:600px){
+    .brands,
+    .styles,
+    .tabs{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>📱 SENSITIVITY GUIDE</h1>
+    <p>Chineseloud FF Guide</p>
+</header>
+
+<main>
+
+<a class="back" href="index.html">← Back</a>
+
+<div class="intro">
+    <b style="color:#ff8800">
+        Free Fire Sensitivity Calculator
+    </b>
+    <br>
+    Choose your brand, exact phone model and play style.
+    No RAM, DPI, screen-size or refresh-rate questions.
+</div>
+
+<section class="box">
+
+<h2>🎯 SENSITIVITY CALCULATOR</h2>
+
+<p class="sub">
+    Your phone is all we need.
+</p>
+
+<label>📱 Phone Brand</label>
+
+<div class="brands" id="brands"></div>
+
+<label>🔎 Search your phone</label>
+
+<input
+    id="search"
+    placeholder="Example: Spark 30 Pro"
+>
+
+<label>📲 Phone Model</label>
+
+<select id="model"></select>
+
+<label>🔥 Play Style</label>
+
+<div class="styles">
+
+<button class="style active" data-style="headshot">
+    🎯 Headshot
+</button>
+
+<button class="style" data-style="rusher">
+    ⚡ Rusher
+</button>
+
+<button class="style" data-style="balanced">
+    🎮 Balanced
+</button>
+
+<button class="style" data-style="sniper">
+    🔭 Sniper
+</button>
+
+</div>
+
+<label>🎮 Game</label>
+
+<select id="game">
+    <option>Free Fire</option>
+    <option>Free Fire MAX</option>
+</select>
+
+<button class="generate" id="generate">
+    GENERATE SENSITIVITY
+</button>
+
+<div class="result" id="result">
+
+<h3 id="title"></h3>
+
+<div class="grid">
+
+<div class="item">
+    <span>General</span>
+    <b id="g"></b>
+</div>
+
+<div class="item">
+    <span>Red Dot</span>
+    <b id="r"></b>
+</div>
+
+<div class="item">
+    <span>2× Scope</span>
+    <b id="s2"></b>
+</div>
+
+<div class="item">
+    <span>4× Scope</span>
+    <b id="s4"></b>
+</div>
+
+<div class="item">
+    <span>Sniper</span>
+    <b id="sn"></b>
+</div>
+
+<div class="item">
+    <span>Free Look</span>
+    <b id="fl"></b>
+</div>
+
+<div class="item">
+    <span>Fire Button</span>
+    <b id="fb"></b>
+</div>
+
+</div>
+
+<button class="copy" id="copy">
+    📋 COPY SETTINGS
+</button>
+
+<p class="note">
+    Recommended starting settings; small personal adjustments
+    may be needed.
+</p>
+
+</div>
+
+</section>
+
+<div class="intro">
+
+<b style="color:#ff8800">
+    📋 Device Profiles
+</b>
+
+<br>
+
+Browse the same profiles used by the calculator.
+
+</div>
+
+<div class="tabs" id="tabs"></div>
+
+<div id="panels"></div>
+
+<div class="tip">
+
+<b style="color:#ff8800">💡 TIP:</b>
+
+Start with the recommended profile and make small adjustments
+after playing a few matches.
+
+</div>
+
+</main>
+
+
+<script>
+
+/* =========================================================
+   PHONE DATABASE
+   ========================================================= */
+
+const DEVICES = {
+
+"Tecno":[
+"POP 9",
+"POP 8",
+"POP 7",
+"POP 6",
+"SPARK 20",
+"SPARK 20C",
+"SPARK 20 Pro",
+"SPARK 20 Pro+",
+"SPARK 30",
+"SPARK 30C",
+"SPARK 30 Pro",
+"SPARK 30 5G",
+"SPARK 40",
+"SPARK 40C",
+"SPARK 40 Pro",
+"SPARK 40 5G",
+"SPARK 50",
+"SPARK 50 Pro",
+"SPARK 50 5G",
+"CAMON 20",
+"CAMON 20 Pro 5G",
+"CAMON 30",
+"CAMON 30 5G",
+"CAMON 30 Pro 5G",
+"CAMON 40",
+"CAMON 40 Pro 5G",
+"CAMON 40 Premier 5G",
+"CAMON 50",
+"CAMON 50 Ultra 5G",
+"POVA 5",
+"POVA 5 Pro 5G",
+"POVA 6",
+"POVA 6 Pro 5G",
+"POVA 8 5G",
+"POVA 8 Pro 5G",
+"PHANTOM X2",
+"PHANTOM X2 Pro",
+"PHANTOM V Flip",
+"PHANTOM V Fold2 5G"
+],
+
+"Infinix":[
+"SMART 8",
+"SMART 9",
+"SMART 10",
+"SMART 20",
+"HOT 20",
+"HOT 30",
+"HOT 40",
+"HOT 50",
+"HOT 50 Pro",
+"HOT 50 Pro+",
+"HOT 60",
+"HOT 60 5G",
+"HOT 60 Pro",
+"HOT 60 Pro+",
+"HOT 60 Pro FREE FIRE",
+"HOT 60 Pro+ FREE FIRE",
+"HOT 70",
+"HOT 70 Pro 5G+",
+"NOTE 30",
+"NOTE 40",
+"NOTE 40 Pro",
+"NOTE 40 Pro+ 5G",
+"NOTE 50S 5G",
+"NOTE 60",
+"NOTE 60 Pro",
+"NOTE 60 Ultra",
+"GT 10 Pro",
+"GT 20 Pro",
+"GT 30",
+"GT 30 Pro",
+"GT 50 Pro"
+],
+
+"Samsung":[
+"Galaxy A05",
+"Galaxy A05s",
+"Galaxy A06",
+"Galaxy A07",
+"Galaxy A15",
+"Galaxy A16",
+"Galaxy A17",
+"Galaxy A24",
+"Galaxy A25",
+"Galaxy A26",
+"Galaxy A34",
+"Galaxy A35",
+"Galaxy A36",
+"Galaxy A54",
+"Galaxy A55",
+"Galaxy A56",
+"Galaxy S21",
+"Galaxy S21 FE",
+"Galaxy S22",
+"Galaxy S22+",
+"Galaxy S22 Ultra",
+"Galaxy S23",
+"Galaxy S23+",
+"Galaxy S23 Ultra",
+"Galaxy S24",
+"Galaxy S24+",
+"Galaxy S24 Ultra",
+"Galaxy S25",
+"Galaxy S25+",
+"Galaxy S25 Ultra",
+"Galaxy S26",
+"Galaxy S26+",
+"Galaxy S26 Ultra",
+"Galaxy Z Flip5",
+"Galaxy Z Flip6",
+"Galaxy Z Fold5",
+"Galaxy Z Fold6"
+],
+
+"itel":[
+"A60",
+"A60s",
+"A70",
+"A80",
+"A90",
+"A100",
+"A100C",
+"A58",
+"P40",
+"P55",
+"POWER 38",
+"POWER 38 Pro",
+"POWER 65",
+"POWER 70",
+"POWER 80",
+"RS4",
+"S18",
+"S18 Pro",
+"SUPER 26 Ultra",
+"CITY 100"
+],
+
+"iPhone":[
+"iPhone X",
+"iPhone XR",
+"iPhone XS Max",
+"iPhone 11",
+"iPhone 11 Pro Max",
+"iPhone SE (2nd gen)",
+"iPhone 12",
+"iPhone 12 Pro Max",
+"iPhone 13",
+"iPhone 13 Pro Max",
+"iPhone SE (3rd gen)",
+"iPhone 14",
+"iPhone 14 Pro Max",
+"iPhone 15",
+"iPhone 15 Pro",
+"iPhone 15 Pro Max",
+"iPhone 16",
+"iPhone 16 Plus",
+"iPhone 16 Pro",
+"iPhone 16 Pro Max",
+"iPhone 17",
+"iPhone 17 Air",
+"iPhone 17 Pro",
+"iPhone 17 Pro Max"
+],
+
+"Huawei":[
+"nova 13",
+"nova 13 Pro",
+"nova 14",
+"nova 14 Pro",
+"nova 15",
+"nova 15 Pro",
+"nova 15 Max",
+"nova 16s",
+"nova 16s Pro",
+"nova Y74",
+"Pura 70",
+"Pura 70 Pro",
+"Pura 80",
+"Pura 80 Pro",
+"Pura 80 Ultra",
+"Mate 70 Pro",
+"Mate 80 Pro",
+"Mate X6",
+"Mate X7",
+"Mate XT ULTIMATE DESIGN"
+],
+
+"Vivo":[
+"Y03",
+"Y04",
+"Y05",
+"Y11d",
+"Y19s",
+"Y21d",
+"Y28",
+"Y29",
+"Y31 5G",
+"Y31d",
+"Y500",
+"V27",
+"V27e",
+"V29",
+"V30",
+"V30 5G",
+"V40",
+"V50",
+"V60",
+"V60 Lite 5G",
+"V70",
+"V70 FE"
+],
+
+"OPPO":[
+"A3",
+"A3x",
+"A5",
+"A5 Pro",
+"A60",
+"A78",
+"A79",
+"A80",
+"Reno10",
+"Reno11",
+"Reno11 Pro 5G",
+"Reno12",
+"Reno12 F",
+"Reno12 F 5G",
+"Reno12 Pro 5G",
+"Reno13",
+"Reno13 F",
+"Reno13 Pro 5G",
+"Reno14 5G",
+"Reno14 F 5G",
+"Find X5 Pro",
+"Find X8",
+"Find X8 Pro",
+"Find N5"
+]
+
+};
+
+
+/* =========================================================
+   DEVICE PERFORMANCE TIERS
+   ========================================================= */
+
+const TIERS = {
+
+"Tecno":{
+"POP 9":1,"POP 8":1,"POP 7":1,"POP 6":1,
+"SPARK 20":2,"SPARK 20C":2,"SPARK 20 Pro":3,"SPARK 20 Pro+":3,
+"SPARK 30":2,"SPARK 30C":2,"SPARK 30 Pro":3,"SPARK 30 5G":3,
+"SPARK 40":2,"SPARK 40C":2,"SPARK 40 Pro":3,"SPARK 40 5G":3,
+"SPARK 50":2,"SPARK 50 Pro":3,"SPARK 50 5G":3,
+"CAMON 20":3,"CAMON 20 Pro 5G":3,"CAMON 30":3,"CAMON 30 5G":3,
+"CAMON 30 Pro 5G":4,"CAMON 40":3,"CAMON 40 Pro 5G":4,
+"CAMON 40 Premier 5G":4,"CAMON 50":3,"CAMON 50 Ultra 5G":4,
+"POVA 5":3,"POVA 5 Pro 5G":4,"POVA 6":3,"POVA 6 Pro 5G":4,
+"POVA 8 5G":4,"POVA 8 Pro 5G":4,
+"PHANTOM X2":4,"PHANTOM X2 Pro":4,
+"PHANTOM V Flip":4,"PHANTOM V Fold2 5G":4
+},
+
+"Infinix":{
+"SMART 8":1,"SMART 9":1,"SMART 10":1,"SMART 20":1,
+"HOT 20":2,"HOT 30":2,"HOT 40":2,"HOT 50":2,
+"HOT 50 Pro":3,"HOT 50 Pro+":3,
+"HOT 60":2,"HOT 60 5G":3,"HOT 60 Pro":3,"HOT 60 Pro+":3,
+"HOT 60 Pro FREE FIRE":3,"HOT 60 Pro+ FREE FIRE":3,
+"HOT 70":3,"HOT 70 Pro 5G+":3,
+"NOTE 30":3,"NOTE 40":3,"NOTE 40 Pro":3,"NOTE 40 Pro+ 5G":4,
+"NOTE 50S 5G":3,"NOTE 60":3,"NOTE 60 Pro":3,"NOTE 60 Ultra":4,
+"GT 10 Pro":4,"GT 20 Pro":4,"GT 30":4,"GT 30 Pro":4,"GT 50 Pro":4
+},
+
+"Samsung":{
+"Galaxy A05":1,"Galaxy A05s":1,"Galaxy A06":1,"Galaxy A07":1,
+"Galaxy A15":2,"Galaxy A16":2,"Galaxy A17":2,"Galaxy A24":2,
+"Galaxy A25":3,"Galaxy A26":3,"Galaxy A34":3,"Galaxy A35":3,
+"Galaxy A36":3,"Galaxy A54":3,"Galaxy A55":3,"Galaxy A56":3,
+"Galaxy S21":4,"Galaxy S21 FE":4,"Galaxy S22":4,"Galaxy S22+":4,
+"Galaxy S22 Ultra":4,"Galaxy S23":4,"Galaxy S23+":4,
+"Galaxy S23 Ultra":4,"Galaxy S24":4,"Galaxy S24+":4,
+"Galaxy S24 Ultra":4,"Galaxy S25":4,"Galaxy S25+":4,
+"Galaxy S25 Ultra":4,"Galaxy S26":4,"Galaxy S26+":4,
+"Galaxy S26 Ultra":4,"Galaxy Z Flip5":4,"Galaxy Z Flip6":4,
+"Galaxy Z Fold5":4,"Galaxy Z Fold6":4
+},
+
+"itel":{
+"A60":1,"A60s":1,"A70":1,"A80":1,"A90":1,"A100":1,"A100C":1,"A58":1,
+"P40":1,"P55":1,"POWER 38":1,"POWER 38 Pro":1,
+"POWER 65":2,"POWER 70":2,"POWER 80":2,
+"RS4":2,"S18":1,"S18 Pro":1,"SUPER 26 Ultra":2,"CITY 100":1
+},
+
+"iPhone":{
+"iPhone X":2,"iPhone XR":2,"iPhone XS Max":2,
+"iPhone 11":2,"iPhone 11 Pro Max":4,
+"iPhone SE (2nd gen)":2,"iPhone 12":3,"iPhone 12 Pro Max":4,
+"iPhone 13":3,"iPhone 13 Pro Max":4,"iPhone SE (3rd gen)":2,
+"iPhone 14":3,"iPhone 14 Pro Max":4,"iPhone 15":3,
+"iPhone 15 Pro":4,"iPhone 15 Pro Max":4,"iPhone 16":3,
+"iPhone 16 Plus":3,"iPhone 16 Pro":4,"iPhone 16 Pro Max":4,
+"iPhone 17":3,"iPhone 17 Air":3,"iPhone 17 Pro":4,
+"iPhone 17 Pro Max":4
+},
+
+"Huawei":{
+"nova 13":2,"nova 13 Pro":3,"nova 14":2,"nova 14 Pro":3,
+"nova 15":3,"nova 15 Pro":3,"nova 15 Max":3,
+"nova 16s":3,"nova 16s Pro":3,"nova Y74":2,
+"Pura 70":4,"Pura 70 Pro":4,"Pura 80":4,"Pura 80 Pro":4,
+"Pura 80 Ultra":4,"Mate 70 Pro":3,"Mate 80 Pro":4,
+"Mate X6":4,"Mate X7":4,"Mate XT ULTIMATE DESIGN":4
+},
+
+"Vivo":{
+"Y03":1,"Y04":1,"Y05":1,"Y11d":1,"Y19s":1,"Y21d":1,
+"Y28":2,"Y29":2,"Y31 5G":2,"Y31d":2,"Y500":2,
+"V27":2,"V27e":2,"V29":2,"V30":3,"V30 5G":3,
+"V40":3,"V50":3,"V60":3,"V60 Lite 5G":3,"V70":3,"V70 FE":3
+},
+
+"OPPO":{
+"A3":1,"A3x":1,"A5":2,"A5 Pro":2,"A60":2,"A78":2,
+"A79":2,"A80":2,"Reno10":3,"Reno11":3,"Reno11 Pro 5G":4,
+"Reno12":3,"Reno12 F":3,"Reno12 F 5G":3,"Reno12 Pro 5G":3,
+"Reno13":3,"Reno13 F":3,"Reno13 Pro 5G":4,
+"Reno14 5G":4,"Reno14 F 5G":4,
+"Find X5 Pro":4,"Find X8":4,"Find X8 Pro":4,"Find N5":4
+}
+
+};
+
+
+/*
+   Base profiles:
+   General, Red Dot, 2X, 4X, Sniper, Free Look, Fire Button
+*/
+
+const BASE = {
+    1:[165,155,145,135,85,165,44],
+    2:[173,164,154,144,89,173,46],
+    3:[182,173,164,154,94,182,48],
+    4:[190,181,172,162,98,190,50]
+};
+
+
+/*
+   Play-style adjustments
+*/
+
+const ADJ = {
+
+    headshot:[3,3,2,1,0,2,48],
+
+    rusher:[5,4,3,2,-2,3,50],
+
+    balanced:[0,0,0,0,0,0,46],
+
+    sniper:[-3,-2,-1,0,4,-2,44]
+
+};
+
+
+let brand="Tecno";
+
+let style="headshot";
+
+let current=null;
+
+
+const $ = id =>
+    document.getElementById(id);
+
+
+const clamp = n =>
+    Math.max(0,Math.min(200,Math.round(n)));
+
+
+/* =========================
+   BRAND BUTTONS
+   ========================= */
+
+function renderBrands(){
+
+    $("brands").innerHTML =
+        Object.keys(DEVICES)
+        .map(b => `
+            <button
+                class="brand ${b===brand?"active":""}"
+                data-brand="${b}">
+                ${b}
+            </button>
+        `)
+        .join("");
+
+}
+
+
+/* =========================
+   PHONE SEARCH
+   ========================= */
+
+function renderModels(){
+
+    let query =
+        $("search").value
+        .toLowerCase()
+        .trim();
+
+    $("model").innerHTML =
+        '<option value="">Select your phone model</option>' +
+
+        DEVICES[brand]
+
+        .filter(model =>
+            model.toLowerCase().includes(query)
+        )
+
+        .map(model =>
+            `<option>${model}</option>`
+        )
+
+        .join("");
+
+}
+
+
+/* =========================
+   DEVICE TABLES
+   ========================= */
+
+function renderTables(){
+
+    $("tabs").innerHTML =
+        Object.keys(DEVICES)
+
+        .map((b,i) => `
+            <button
+                class="tab ${i===0?"active":""}"
+                data-b="${b}">
+                ${b}
+            </button>
+        `)
+
+        .join("");
+
+
+    $("panels").innerHTML =
+        Object.keys(DEVICES)
+
+        .map((b,i) => {
+
+            return `
+            <section
+                class="panel ${i===0?"show":""}"
+                id="p-${b}">
+
+                <h2>${b} Sensitivity</h2>
+
+                <div class="tablewrap">
+
+                <table>
+
+                <tr>
+                    <th>Device</th>
+                    <th>General</th>
+                    <th>Red Dot</th>
+                    <th>2×</th>
+                    <th>4×</th>
+                    <th>Sniper</th>
+                    <th>Free Look</th>
+                    <th>Fire Button</th>
+                </tr>
+
+                ${
+                    DEVICES[b].map(model => {
+
+                        let v =
+                            BASE[
+                                TIERS[b][model]
+                            ];
+
+                        return `
+                        <tr>
+
+                            <td>${model}</td>
+
+                            <td>${v[0]}</td>
+
+                            <td>${v[1]}</td>
+
+                            <td>${v[2]}</td>
+
+                            <td>${v[3]}</td>
+
+                            <td>${v[4]}</td>
+
+                            <td>${v[5]}</td>
+
+                            <td>${v[6]}%</td>
+
+                        </tr>
+                        `;
+
+                    }).join("")
+                }
+
+                </table>
+
+                </div>
+
+            </section>
+            `;
+
+        })
+
+        .join("");
+
+}
+
+
+/* =========================
+   BRAND SELECTION
+   ========================= */
+
+$("brands").onclick = event => {
+
+    let button =
+        event.target.closest(".brand");
+
+    if(!button) return;
+
+    brand =
+        button.dataset.brand;
+
+    renderBrands();
+
+    $("search").value="";
+
+    renderModels();
+
+    $("result")
+        .classList
+        .remove("show");
+
+};
+
+
+/* =========================
+   SEARCH
+   ========================= */
+
+$("search").oninput =
+    renderModels;
+
+
+/* =========================
+   PLAY STYLE
+   ========================= */
+
+document
+.querySelectorAll(".style")
+.forEach(button => {
+
+    button.onclick = () => {
+
+        document
+        .querySelectorAll(".style")
+        .forEach(x =>
+            x.classList.remove("active")
+        );
+
+        button.classList.add("active");
+
+        style =
+            button.dataset.style;
+
+    };
+
+});
+
+
+/* =========================
+   GENERATE SETTINGS
+   ========================= */
+
+$("generate").onclick = () => {
+
+    let model =
+        $("model").value;
+
+    if(!model){
+
+        alert(
+            "Please select your phone model."
+        );
+
+        return;
+
+    }
+
+
+    let base =
+        BASE[
+            TIERS[brand][model]
+        ];
+
+    let adjustment =
+        ADJ[style];
+
+
+    current = {
+
+        brand:brand,
+
+        model:model,
+
+        game:$("game").value,
+
+        style:style,
+
+        g:clamp(
+            base[0] +
+            adjustment[0]
+        ),
+
+        r:clamp(
+            base[1] +
+            adjustment[1]
+        ),
+
+        s2:clamp(
+            base[2] +
+            adjustment[2]
+        ),
+
+        s4:clamp(
+            base[3] +
+            adjustment[3]
+        ),
+
+        sn:clamp(
+            base[4] +
+            adjustment[4]
+        ),
+
+        fl:clamp(
+            base[5] +
+            adjustment[5]
+        ),
+
+        fb:adjustment[6]
+
+    };
+
+
+    $("title").textContent =
+        `${brand} ${model} • ${
+            style[0].toUpperCase() +
+            style.slice(1)
+        }`;
+
+
+    $("g").textContent =
+        current.g;
+
+    $("r").textContent =
+        current.r;
+
+    $("s2").textContent =
+        current.s2;
+
+    $("s4").textContent =
+        current.s4;
+
+    $("sn").textContent =
+        current.sn;
+
+    $("fl").textContent =
+        current.fl;
+
+    $("fb").textContent =
+        current.fb + "%";
+
+
+    $("result")
+        .classList
+        .add("show");
+
+};
+
+
+/* =========================
+   COPY SETTINGS
+   ========================= */
+
+$("copy").onclick = async () => {
+
+    if(!current) return;
+
+
+    let text =
+
+`CHINESELOUD FF GUIDE
+
+${current.brand} ${current.model}
+
+${current.game} • ${current.style.toUpperCase()}
+
+General: ${current.g}
+Red Dot: ${current.r}
+2× Scope: ${current.s2}
+4× Scope: ${current.s4}
+Sniper: ${current.sn}
+Free Look: ${current.fl}
+Fire Button: ${current.fb}%`;
+
+
+    try{
+
+        await navigator
+            .clipboard
+            .writeText(text);
+
+
+        $("copy").textContent =
+            "✅ COPIED!";
+
+
+        setTimeout(() => {
+
+            $("copy").textContent =
+                "📋 COPY SETTINGS";
+
+        },1600);
+
+
+    }catch(error){
+
+        alert(text);
+
+    }
+
+};
+
+
+/* =========================
+   TABLE TABS
+   ========================= */
+
+$("tabs").onclick = event => {
+
+    let button =
+        event.target.closest(".tab");
+
+    if(!button) return;
+
+
+    document
+    .querySelectorAll(".tab")
+    .forEach(x =>
+        x.classList.remove("active")
+    );
+
+
+    button.classList.add("active");
+
+
+    document
+    .querySelectorAll(".panel")
+    .forEach(x =>
+        x.classList.remove("show")
+    );
+
+
+    $("p-" + button.dataset.b)
+        .classList
+        .add("show");
+
+};
+
+
+/* =========================
+   START
+   ========================= */
+
+renderBrands();
+
+renderModels();
+
+renderTables();
+
+</script>
+
+</body>
+</html>
