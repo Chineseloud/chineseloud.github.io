@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Characters - Chineseloud Guide</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0a0a0a;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background: linear-gradient(90deg, #ff4400, #ff8800);
+  padding: 25px 15px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 24px;
+  letter-spacing: 4px;
+}
+
+.back {
+  display: inline-block;
+  margin: 20px 16px 10px;
+  color: #ff8800;
+  text-decoration: none;
+  border: 1px solid #ff8800;
+  padding: 9px 18px;
+  border-radius: 25px;
+  font-size: 13px;
+}
+
+.search-box {
+  padding: 10px 16px 4px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 16px 20px;
+  background: #151515;
+  border: 1px solid #333;
+  border-radius: 14px;
+  color: white;
+  font-size: 15px;
+  outline: none;
+}
+
+.search-box input:focus {
+  border-color: #ff5500;
+}
+
+.search-box input::placeholder {
+  color: #777;
+}
+
+.character-count {
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+  padding: 12px 0 18px;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0 16px 20px;
+  justify-content: center;
+}
+
+.cat-btn {
+  background: #111;
+  border: 1.5px solid #ff4400;
+  color: #ff8800;
+  padding: 12px 17px;
+  border-radius: 25px;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cat-btn.active {
+  background: #ff4400;
+  color: white;
+}
+
+.content {
+  display: none;
+  padding: 0 25px 30px;
+}
+
+.content.active {
+  display: block;
+}
+
+.category-title {
+  font-size: 22px;
+  color: #ff8800;
+  margin: 15px 0 10px;
+  letter-spacing: 2px;
+  border-bottom: 1px solid #ff4400;
+  padding-bottom: 12px;
+}
+
+.category-desc {
+  color: #aaa;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.character {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.character h3 {
+  color: #ff8800;
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+
+.character .ability {
+  color: #ff4d00;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+
+.character p {
+  color: #aaa;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.tag {
+  display: inline-block;
+  background: #ff4d00;
+  color: white;
+  font-size: 10px;
+  padding: 4px 9px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.no-results {
+  display: none;
+  text-align: center;
+  color: #777;
+  padding: 30px 10px;
+}
+
+.sub-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.sub-tab {
+  flex: 1;
+  text-align: center;
+  padding: 11px;
+  border-radius: 9px;
+  border: 1.5px solid #ff4400;
+  background: #1a1a1a;
+  color: #ff8800;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.sub-tab.active {
+  background: #ff4400;
+  color: white;
+}
+
+.sub-content {
+  display: none;
+}
+
+.sub-content.active {
+  display: block;
+}
+
+.combo-card {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-left: 3px solid #ff4400;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 12px;
+}
+
+.combo-num {
+  display: inline-block;
+  background: #ff4400;
+  color: white;
+  padding: 4px 9px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+
+.combo-card h3 {
+  color: #ff8800;
+  font-size: 16px;
+}
+
+.combo-name {
+  color: #ff4400;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 4px 0;
+}
+
+.combo-card p {
+  color: #aaa;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.tips-box {
+  background: #111;
+  border-left: 3px solid #ff8800;
+  padding: 15px;
+  margin-top: 15px;
+  color: #aaa;
+  line-height: 1.7;
+  font-size: 13px;
+}
+
+.tips-box b {
+  color: #ff8800;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <h1>👤 CHARACTERS GUIDE</h1>
+</div>
+
+<a class="back" href="index.html">← Back to Home</a>
+
+<div class="search-box">
+  <input
+    id="characterSearch"
+    type="text"
+    placeholder="Search a character or ability..."
+    oninput="searchCharacters()"
+  >
+</div>
+
+<!-- THIS IS THE NUMBER YOU WANTED -->
+<div class="character-count" id="characterCount">
+  12 characters in this category
+</div>
+
+<div class="categories">
+
+  <button class="cat-btn active" onclick="showCat('support', this)">
+    💚 Support
+  </button>
+
+  <button class="cat-btn" onclick="showCat('defensive', this)">
+    🛡️ Defensive
+  </button>
+
+  <button class="cat-btn" onclick="showCat('attacker', this)">
+    ⚔️ Attacker
+  </button>
+
+  <button class="cat-btn" onclick="showCat('scout', this)">
+    🔍 Scout
+  </button>
+
+  <button class="cat-btn" onclick="showCat('balanced', this)">
+    ⚡ Balanced
+  </button>
+
+  <button class="cat-btn" onclick="showCat('others', this)">
+    🌟 Others
+  </button>
+
+  <button class="cat-btn" onclick="showCat('active', this)">
+    🎮 Active Skills
+  </button>
+
+  <button class="cat-btn" onclick="showCat('passive', this)">
+    🛡️ Passive Skills
+  </button>
+
+  <button class="cat-btn" onclick="showCat('combos', this)">
+    🔥 Best Combos
+  </button>
+
+</div>
+
+
+<!-- =====================================================
+     SUPPORT
+===================================================== -->
+
+<div class="content active" id="support">
+
+  <div class="category-title">
+    💚 SUPPORT / HEALER
+  </div>
+
+  <div class="category-desc">
+    Characters focused on healing, reviving, EP/HP support and helping teammates survive.
+  </div>
+
+  <div id="supportList"></div>
+
+  <div class="no-results">No characters found.</div>
+
+</div>
+
+
+<!-- =====================================================
+     DEFENSIVE
+===================================================== -->
+
+<div class="content" id="defensive">
+
+  <div class="category-title">
+    🛡️ DEFENSIVE / SURVIVAL
+  </div>
+
+  <div class="category-desc">
+    Characters focused on protection, armor, shields and surviving dangerous fights.
+  </div>
+
+  <div id="defensiveList"></div>
+
+  <div class="no-results">No characters found.</div>
+
+</div>
+
+
+<!-- =====================================================
+     ATTACKER
+===================================================== -->
+
+<div class="content" id="attacker">
+
+  <div class="category-title">
+    ⚔️ ATTACKER / RUSHER
+  </div>
+
+  <div class="category-desc">
+    Characters suited for rushing, close-range fights, damage and aggressive gameplay.
+  </div>
+
+  <div id="attackerList"></div>
+
+  <div class="no-results">No characters found.</div>
+
+</div>
+
+
+<!-- =====================================================
+     SCOUT
+===================================================== -->
+
+<div class="content" id="scout">
+
+  <div class="category-title">
+    🔍 SCOUT / INTEL
+  </div>
+
+  <div class="category-desc">
+    Characters focused on finding enemies, tracking targets and gaining information.
+  </div>
+
+  <div id="scoutList"></div>
+
+  <div class="no-results">No characters found.</div>
+
+</div>
+
+
+<!-- =====================================================
+     BALANCED
+===================================================== -->
+
+<div class="content" id="balanced">
+
+  <div class="category-title">
+    ⚡ BALANCED / UTILITY
+  </div>
+
+  <div class="category-desc">
+    Characters with useful abilities for movement, weapons, utility and different situations.
+  </div>
+
+  <div id="balancedList"></div>
+
+  <div class="no-results">No characters found.</div>
+
+</div>
+
+
+<!-- =====================================================
+     OTHERS
+===================================================== -->
+
+<div class="content" id="others">
+
+  <div class="category-title">
+    🌟 OTHERS / SPECIALISTS
+  </div>
+
+  <div class="category-desc">
+    Unique characters whose abilities don't fit neatly into one main role.
+  </div>
+
+  <div id="othersList"></div>
+
+  <div class="no-results">No characters found.</div>
+
+</div>
+
+
+<!-- =====================================================
+     ACTIVE SKILLS
+===================================================== -->
+
+<div class="content" id="active">
+
+  <div class="category-title">
+    🎮 ACTIVE SKILLS
+  </div>
+
+  <div class="category-desc">
+    These abilities are activated manually during a match.
+  </div>
+
+  <div id="activeList"></div>
+
+</div>
+
+
+<!-- =====================================================
+     PASSIVE SKILLS
+===================================================== -->
+
+<div class="content" id="passive">
+
+  <div class="category-title">
+    🛡️ PASSIVE SKILLS
+  </div>
+
+  <div class="category-desc">
+    These abilities work automatically without manually pressing the skill button.
+  </div>
+
+  <div id="passiveList"></div>
+
+</div>
+
+
+<!-- =====================================================
+     BEST COMBOS
+===================================================== -->
+
+<div class="content" id="combos">
+
+  <div class="category-title">
+    🔥 BEST COMBOS
+  </div>
+
+  <div class="sub-tabs">
+
+    <div
+      class="sub-tab active"
+      onclick="showSub('rusher', this)"
+    >
+      🏃 Rusher
+    </div>
+
+    <div
+      class="sub-tab"
+      onclick="showSub('camper', this)"
+    >
+      🏕️ Camper
+    </div>
+
+  </div>
+
+
+  <div class="sub-content active" id="rusher">
+
+    <div class="category-desc">
+      Aggressive combinations for players who like to push and fight.
+    </div>
+
+    <div class="combo-card">
+      <div class="combo-num">Combo 1</div>
+      <h3>Tatsuya + Jota + D-Boas + Hayato</h3>
+      <div class="combo-name">🔥 Rush Machine</div>
+      <p>
+        Strong mobility, HP recovery, movement accuracy and better
+        performance when your HP is low.
+      </p>
+    </div>
+
+    <div class="combo-card">
+      <div class="combo-num">Combo 2</div>
+      <h3>Alok + Jota + Moco + Hayato</h3>
+      <div class="combo-name">⚡ Fast Fighter</div>
+      <p>
+        Movement support, recovery, enemy tracking and stronger
+        low-HP combat.
+      </p>
+    </div>
+
+    <div class="combo-card">
+      <div class="combo-num">Combo 3</div>
+      <h3>Orion + D-Boas + Moco + Jota</h3>
+      <div class="combo-name">💀 Close Range</div>
+      <p>
+        Designed for aggressive close-range fights with mobility,
+        information and recovery.
+      </p>
+    </div>
+
+  </div>
+
+
+  <div class="sub-content" id="camper">
+
+    <div class="category-desc">
+      Defensive combinations for holding buildings, playing zone and surviving.
+    </div>
+
+    <div class="combo-card">
+      <div class="combo-num">Combo 1</div>
+      <h3>Chrono + Kapella + Thiva + Olivia</h3>
+      <div class="combo-name">🛡️ Team Support</div>
+      <p>
+        Defense, healing and teammate revival support.
+      </p>
+    </div>
+
+    <div class="combo-card">
+      <div class="combo-num">Combo 2</div>
+      <h3>Kamir + Andrew + Sonia + Kassie</h3>
+      <div class="combo-name">💚 Survival Squad</div>
+      <p>
+        EP support, armor protection, emergency defense and healing.
+      </p>
+    </div>
+
+    <div class="combo-card">
+      <div class="combo-num">Combo 3</div>
+      <h3>Morse + Moco + Otho + Evelyn</h3>
+      <div class="combo-name">🔍 Information</div>
+      <p>
+        Built around stealth, tracking and finding enemies.
+      </p>
+    </div>
+
+  </div>
+
+
+  <div class="tips-box">
+    <b>💡 Quick Tips</b><br><br>
+
+    • Rusher: combine movement + recovery + damage.<br>
+
+    • Support: focus on healing and teammate survival.<br>
+
+    • Scout: use tracking and information abilities.<br>
+
+    • Defensive: combine protection with recovery.<br>
+
+    • You can change your combination depending on the mode.
+  </div>
+
+</div>
+
+
+<script>
+
+/* =====================================================
+   COMPLETE CURRENT CHARACTER DATA
+   65 CHARACTERS
+===================================================== */
+
+const characters = [
+
+  /* ================= SUPPORT ================= */
+
+  {
+    name: "A Patroa",
+    category: "support",
+    type: "Passive",
+    ability: "Special Survival Ability",
+    desc: "A character built around supporting resources and team utility."
+  },
+
+  {
+    name: "A124",
+    category: "support",
+    type: "Passive",
+    ability: "Thrill of Battle",
+    desc: "Converts EP into HP to provide recovery during combat."
+  },
+
+  {
+    name: "Alok",
+    category: "support",
+    type: "Active",
+    ability: "Drop the Beat",
+    desc: "Creates an aura that provides movement support and restores HP."
+  },
+
+  {
+    name: "Dimitri",
+    category: "support",
+    type: "Active",
+    ability: "Healing Heartbeat",
+    desc: "Creates a healing zone that helps players recover and get back into the fight."
+  },
+
+  {
+    name: "Kamir",
+    category: "support",
+    type: "Active",
+    ability: "Master of All",
+    desc: "Uses EP-focused modes to support the player and nearby teammates."
+  },
+
+  {
+    name: "Kapella",
+    category: "support",
+    type: "Passive",
+    ability: "Healing Song",
+    desc: "Improves healing effects and helps teammates survive after being knocked."
+  },
+
+  {
+    name: "Kassie",
+    category: "support",
+    type: "Active",
+    ability: "Electro Therapy",
+    desc: "Creates a healing bond with a teammate and provides HP recovery."
+  },
+
+  {
+    name: "Maxim",
+    category: "support",
+    type: "Passive",
+    ability: "Gluttony",
+    desc: "Uses healing and consumable items faster."
+  },
+
+  {
+    name: "Notora",
+    category: "support",
+    type: "Passive",
+    ability: "Racer's Blessing",
+    desc: "Provides HP recovery support while travelling in vehicles."
+  },
+
+  {
+    name: "Olivia",
+    category: "support",
+    type: "Passive",
+    ability: "Healing Touch",
+    desc: "Improves the HP received by teammates when they are revived."
+  },
+
+  {
+    name: "Thiva",
+    category: "support",
+    type: "Passive",
+    ability: "Vital Vibes",
+    desc: "Improves teammate revival and provides additional support after revival."
+  },
+
+  {
+    name: "J.Biebs",
+    category: "support",
+    type: "Passive",
+    ability: "Silent Sentinel",
+    desc: "Uses EP-based protection to reduce damage for the player and nearby allies."
+  },
+
+
+  /* ================= DEFENSIVE ================= */
+
+  {
+    name: "Andrew",
+    category: "defensive",
+    type: "Passive",
+    ability: "Armor Specialist",
+    desc: "Helps armor last longer by reducing durability loss."
+  },
+
+  {
+    name: "Antonio",
+    category: "defensive",
+    type: "Passive",
+    ability: "Gangster's Spirit",
+    desc: "Provides additional starting HP for better early-game survival."
+  },
+
+  {
+    name: "Chrono",
+    category: "defensive",
+    type: "Active",
+    ability: "Time Turner",
+    desc: "Creates a protective force field that blocks incoming damage."
+  },
+
+  {
+    name: "Ford",
+    category: "defensive",
+    type: "Passive",
+    ability: "Iron Will",
+    desc: "Provides an advantage when taking damage outside the safe zone."
+  },
+
+  {
+    name: "Kenta",
+    category: "defensive",
+    type: "Active",
+    ability: "Swordsman's Wrath",
+    desc: "Creates a frontal defensive shield during combat."
+  },
+
+  {
+    name: "Nairi",
+    category: "defensive",
+    type: "Passive",
+    ability: "Ice Iron",
+    desc: "Improves Gloo Wall durability and provides recovery around Gloo Walls."
+  },
+
+  {
+    name: "Shani",
+    category: "defensive",
+    type: "Passive",
+    ability: "Gear Recycle",
+    desc: "Provides shield support through skill usage."
+  },
+
+  {
+    name: "Sonia",
+    category: "defensive",
+    type: "Passive",
+    ability: "Nano Lifeshield",
+    desc: "Provides emergency protection when the player enters a critical situation."
+  },
+
+  {
+    name: "Steffie",
+    category: "defensive",
+    type: "Active",
+    ability: "Painted Refuge",
+    desc: "Creates a protective area that helps reduce incoming damage."
+  },
+
+  {
+    name: "Xtrema",
+    category: "defensive",
+    type: "Active",
+    ability: "Xtreme Encounter",
+    desc: "Provides temporary HP and increases damage against Gloo Walls and shields."
+  },
+
+
+  /* ================= ATTACKER ================= */
+
+  {
+    name: "Alvaro",
+    category: "attacker",
+    type: "Passive",
+    ability: "Art of Demolition",
+    desc: "Improves the effectiveness of explosive weapons."
+  },
+
+  {
+    name: "D-Boas",
+    category: "attacker",
+    type: "Passive",
+    ability: "Pé de Break",
+    desc: "Improves movement speed and accuracy while shooting on the move."
+  },
+
+  {
+    name: "Hayato",
+    category: "attacker",
+    type: "Passive",
+    ability: "Bushido",
+    desc: "Becomes more dangerous at low HP through increased armor penetration."
+  },
+
+  {
+    name: "Jai",
+    category: "attacker",
+    type: "Passive",
+    ability: "Raging Reload",
+    desc: "Automatically reloads the weapon after knocking down an enemy."
+  },
+
+  {
+    name: "Jota",
+    category: "attacker",
+    type: "Passive",
+    ability: "Sustained Raids",
+    desc: "Provides HP recovery during aggressive gunfights."
+  },
+
+  {
+    name: "Luqueta",
+    category: "attacker",
+    type: "Passive",
+    ability: "Hat Trick",
+    desc: "Increases maximum HP through eliminations."
+  },
+
+  {
+    name: "Miguel",
+    category: "attacker",
+    type: "Passive",
+    ability: "Crazy Slayer",
+    desc: "Gains EP after eliminating enemies."
+  },
+
+  {
+    name: "Orion",
+    category: "attacker",
+    type: "Active",
+    ability: "Crimson Crush",
+    desc: "Uses Crimson Energy to enter a special combat state."
+  },
+
+  {
+    name: "Oscar",
+    category: "attacker",
+    type: "Active",
+    ability: "Valiant Dash",
+    desc: "Dashes forward, damaging Gloo Walls and knocking back enemies in the path."
+  },
+
+  {
+    name: "Ryden",
+    category: "attacker",
+    type: "Active",
+    ability: "Spider Trap",
+    desc: "Releases an explosive spider that slows and causes enemies to bleed."
+  },
+
+  {
+    name: "Suzy",
+    category: "attacker",
+    type: "Passive",
+    ability: "Money Mark",
+    desc: "Provides additional rewards from enemy eliminations."
+  },
+
+  {
+    name: "Tatsuya",
+    category: "attacker",
+    type: "Active",
+    ability: "Rebel Rush",
+    desc: "Performs a rapid dash to close distance or escape."
+  },
+
+
+  /* ================= SCOUT ================= */
+
+  {
+    name: "Evelyn",
+    category: "scout",
+    type: "Active",
+    ability: "Delivering the Gold",
+    desc: "Reveals enemies that are not crouching or prone."
+  },
+
+  {
+    name: "Homero",
+    category: "scout",
+    type: "Active",
+    ability: "Senses Shockwave",
+    desc: "Deploys a drone that disrupts and slows nearby enemies."
+  },
+
+  {
+    name: "Íris",
+    category: "scout",
+    type: "Active",
+    ability: "Wall Brawl",
+    desc: "Uses enemy information and Gloo Wall interaction to support aggressive tracking."
+  },
+
+  {
+    name: "Koda",
+    category: "scout",
+    type: "Passive",
+    ability: "Aurora Vision",
+    desc: "Improves battlefield awareness and helps reveal enemies."
+  },
+
+  {
+    name: "Moco",
+    category: "scout",
+    type: "Passive",
+    ability: "Hacker's Eye",
+    desc: "Marks enemies after they are hit so their location can be tracked."
+  },
+
+  {
+    name: "Morse",
+    category: "scout",
+    type: "Active",
+    ability: "Stealth Bytes",
+    desc: "Enters stealth mode, making the player difficult to detect while gaining mobility."
+  },
+
+  {
+    name: "Otho",
+    category: "scout",
+    type: "Passive",
+    ability: "Memory Mist",
+    desc: "Reveals nearby enemy locations after an elimination."
+  },
+
+  {
+    name: "Rafael",
+    category: "scout",
+    type: "Passive",
+    ability: "Dead Silent",
+    desc: "Provides stealth advantages when using long-range weapons."
+  },
+
+  {
+    name: "Rin",
+    category: "scout",
+    type: "Passive",
+    ability: "Gale of Kunai",
+    desc: "Summons kunai that can target enemies and Gloo Walls."
+  },
+
+
+  /* ================= BALANCED ================= */
+
+  {
+    name: "Caroline",
+    category: "balanced",
+    type: "Passive",
+    ability: "Agility",
+    desc: "Provides additional movement speed while using a shotgun."
+  },
+
+  {
+    name: "Diana",
+    category: "balanced",
+    type: "Passive",
+    ability: "Prowler's Move",
+    desc: "Improves mobility and combat movement."
+  },
+
+  {
+    name: "Joseph",
+    category: "balanced",
+    type: "Passive",
+    ability: "Nutty Movement",
+    desc: "Increases movement speed after taking damage."
+  },
+
+  {
+    name: "Kelly",
+    category: "balanced",
+    type: "Passive",
+    ability: "Dash",
+    desc: "Improves sprinting speed."
+  },
+
+  {
+    name: "Laura",
+    category: "balanced",
+    type: "Passive",
+    ability: "Sharp Shooter",
+    desc: "Improves accuracy while using a scope."
+  },
+
+  {
+    name: "Leon",
+    category: "balanced",
+    type: "Passive",
+    ability: "Buzzer Beater",
+    desc: "Restores HP after surviving combat."
+  },
+
+  {
+    name: "Luna",
+    category: "balanced",
+    type: "Passive",
+    ability: "Fight or Flight",
+    desc: "Provides combat utility connected to attack speed and movement."
+  },
+
+  {
+    name: "Maro",
+    category: "balanced",
+    type: "Passive",
+    ability: "Falcon Fervor",
+    desc: "Improves damage effectiveness at longer ranges."
+  },
+
+  {
+    name: "Misha",
+    category: "balanced",
+    type: "Passive",
+    ability: "Afterburner",
+    desc: "Improves vehicle handling and driving-related survival."
+  },
+
+  {
+    name: "Nikita",
+    category: "balanced",
+    type: "Passive",
+    ability: "Firearms Expert",
+    desc: "Improves reload performance."
+  },
+
+  {
+    name: "Paloma",
+    category: "balanced",
+    type: "Passive",
+    ability: "Arms-dealing",
+    desc: "Provides extra carrying capacity for AR ammunition."
+  },
+
+  {
+    name: "Wukong",
+    category: "balanced",
+    type: "Active",
+    ability: "Camouflage",
+    desc: "Transforms into a bush for stealth and can become useful for surprise attacks."
+  },
+
+
+  /* ================= OTHERS ================= */
+
+  {
+    name: "Ignis",
+    category: "others",
+    type: "Active",
+    ability: "Flame Mirrage",
+    desc: "Creates a wall of fire that can damage enemies and control an area."
+  },
+
+  {
+    name: "Kairos",
+    category: "others",
+    type: "Passive",
+    ability: "Defense Breaker",
+    desc: "Uses EP to enter different modes and damage enemy shields and armor."
+  },
+
+  {
+    name: "Kla",
+    category: "others",
+    type: "Passive",
+    ability: "Muay Thai",
+    desc: "Improves close-range unarmed attacks."
+  },
+
+  {
+    name: "Lila",
+    category: "others",
+    type: "Passive",
+    ability: "Gloo Artist",
+    desc: "Uses Gloo Wall mechanics to gain defensive and combat advantages."
+  },
+
+  {
+    name: "Nero",
+    category: "others",
+    type: "Passive",
+    ability: "Dreamsmith",
+    desc: "A newer character with a unique combat survival ability."
+  },
+
+  {
+    name: "Ray",
+    category: "others",
+    type: "Active",
+    ability: "Eclipse Domain",
+    desc: "A newer character with a special combat-focused survival ability."
+  },
+
+  {
+    name: "Santino",
+    category: "others",
+    type: "Active",
+    ability: "Shape Splitter",
+    desc: "Creates a mannequin that can be used for unpredictable teleportation."
+  },
+
+  {
+    name: "Shiro",
+    category: "others",
+    type: "Passive",
+    ability: "Damage Delivered",
+    desc: "Marks enemies who damage you and provides useful information."
+  },
+
+  {
+    name: "Skyler",
+    category: "others",
+    type: "Active",
+    ability: "Riptide Rhythm",
+    desc: "Uses a sonic wave to interact with Gloo Walls and support aggressive plays."
+  },
+
+  {
+    name: "Wolfrahh",
+    category: "others",
+    type: "Passive",
+    ability: "Limelight",
+    desc: "Improves combat performance as the number of spectators increases."
+  }
+
+];
+
+
+/* =====================================================
+   CATEGORY SETUP
+===================================================== */
+
+const categoryNames = {
+  support: "Support",
+  defensive: "Defensive",
+  attacker: "Attacker",
+  scout: "Scout",
+  balanced: "Balanced",
+  others: "Others",
+  active: "Active Skills",
+  passive: "Passive Skills"
+};
+
+let currentCategory = "support";
+
+
+/* =====================================================
+   CREATE CHARACTER CARD
+===================================================== */
+
+function createCard(character) {
+
+  return `
+    <div
+      class="character"
+      data-name="${character.name.toLowerCase()}"
+      data-ability="${character.ability.toLowerCase()}"
+    >
+
+      <div class="tag">
+        ${character.type}
+      </div>
+
+      <h3>${character.name}</h3>
+
+      <div class="ability">
+        ${character.ability}
+      </div>
+
+      <p>
+        ${character.desc}
+      </p>
+
+    </div>
+  `;
+}
+
+
+/* =====================================================
+   RENDER CATEGORY
+===================================================== */
+
+function renderCategory(category) {
+
+  let list = [];
+
+  if (
+    category === "support" ||
+    category === "defensive" ||
+    category === "attacker" ||
+    category === "scout" ||
+    category === "balanced" ||
+    category === "others"
+  ) {
+
+    list = characters.filter(function(character) {
+      return character.category === category;
+    });
+
+  }
+
+  else if (category === "active") {
+
+    list = characters.filter(function(character) {
+      return character.type === "Active";
+    });
+
+  }
+
+  else if (category === "passive") {
+
+    list = characters.filter(function(character) {
+      return character.type === "Passive";
+    });
+
+  }
+
+
+  let html = "";
+
+  list.forEach(function(character) {
+    html += createCard(character);
+  });
+
+
+  const element =
+    document.getElementById(category + "List");
+
+  if (element) {
+    element.innerHTML = html;
+  }
+
+
+  updateCount(list.length);
+
+}
+
+
+/* =====================================================
+   UPDATE NUMBER UNDER SEARCH
+===================================================== */
+
+function updateCount(number) {
+
+  const count =
+    document.getElementById("characterCount");
+
+  if (!count) return;
+
+  if (
+    currentCategory === "active" ||
+    currentCategory === "passive"
+  ) {
+
+    count.textContent =
+      number + " characters in this category";
+
+  } else {
+
+    count.textContent =
+      number + " characters in this category";
+
+  }
+
+}
+
+
+/* =====================================================
+   SWITCH CATEGORY
+===================================================== */
+
+function showCat(id, button) {
+
+  currentCategory = id;
+
+
+  document.querySelectorAll(".content").forEach(function(content) {
+    content.classList.remove("active");
+  });
+
+
+  const selected =
+    document.getElementById(id);
+
+  if (selected) {
+    selected.classList.add("active");
+  }
+
+
+  document.querySelectorAll(".cat-btn").forEach(function(btn) {
+    btn.classList.remove("active");
+  });
+
+
+  button.classList.add("active");
+
+
+  document.getElementById("characterSearch").value = "";
+
+
+  renderCategory(id);
+
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+function searchCharacters() {
+
+  const search =
+    document
+      .getElementById("characterSearch")
+      .value
+      .toLowerCase()
+      .trim();
+
+
+  const active =
+    document.querySelector(".content.active");
+
+
+  if (!active) return;
+
+
+  const cards =
+    active.querySelectorAll(".character");
+
+
+  let visible = 0;
+
+
+  cards.forEach(function(card) {
+
+    const name =
+      card.getAttribute("data-name") || "";
+
+    const ability =
+      card.getAttribute("data-ability") || "";
+
+    const text =
+      card.innerText.toLowerCase();
+
+
+    if (
+      name.includes(search) ||
+      ability.includes(search) ||
+      text.includes(search)
+    ) {
+
+      card.style.display = "";
+      visible++;
+
+    } else {
+
+      card.style.display = "none";
+
+    }
+
+  });
+
+
+  if (
+    currentCategory !== "combos"
+  ) {
+
+    document.getElementById("characterCount").textContent =
+      visible + " characters in this category";
+
+  }
+
+}
+
+
+/* =====================================================
+   COMBO TABS
+===================================================== */
+
+function showSub(id, button) {
+
+  document.querySelectorAll(".sub-content")
+    .forEach(function(content) {
+      content.classList.remove("active");
+    });
+
+
+  const selected =
+    document.getElementById(id);
+
+  if (selected) {
+    selected.classList.add("active");
+  }
+
+
+  document.querySelectorAll(".sub-tab")
+    .forEach(function(tab) {
+      tab.classList.remove("active");
+    });
+
+
+  button.classList.add("active");
+
+}
+
+
+/* =====================================================
+   INITIAL LOAD
+===================================================== */
+
+renderCategory("support");
+
+</script>
+
+</body>
+</html>
