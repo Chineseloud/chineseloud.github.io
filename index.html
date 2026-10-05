@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Chineseloud.ff.guide | Free Fire Guides, Tips & Strategies</title>
+
+  <meta name="description"
+    content="Chineseloud is a Free Fire guide with character combos, weapon guides, sensitivity tips, rank strategies, maps, skills and the latest Free Fire updates.">
+
+  <meta name="keywords"
+    content="Free Fire guide, Free Fire tips, Free Fire characters, Free Fire weapons, Free Fire sensitivity, Free Fire rank tips, Free Fire strategies">
+
+  <!-- KEEP YOUR EXISTING GOOGLE VERIFICATION TAG HERE -->
+
+  <meta name="theme-color" content="#FF5E00">
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon-192.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700;800&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --orange: #FF5E00;
+      --orange-light: #FF7A2F;
+      --orange-glow: rgba(255, 94, 0, 0.20);
+      --dark: #0C0C0C;
+      --card: #161616;
+      --card-hover: #1c1c1c;
+      --border: rgba(255, 94, 0, 0.25);
+      --text: #f2f2f2;
+      --muted: #999;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--dark);
+      color: var(--text);
+      font-family: "Barlow", Arial, sans-serif;
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(12, 12, 12, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-inner {
+      max-width: 1150px;
+      margin: auto;
+      padding: 15px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-family: "Rajdhani", sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: var(--orange);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .nav-links::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nav-links a {
+      color: #bbb;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover {
+      color: var(--orange);
+    }
+
+    /* HERO */
+
+    .hero {
+      max-width: 1150px;
+      margin: auto;
+      padding: 75px 18px 55px;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 7px 14px;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      color: var(--orange-light);
+      background: rgba(255, 94, 0, 0.06);
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-family: "Rajdhani", sans-serif;
+      font-size: clamp(42px, 8vw, 72px);
+      line-height: 0.95;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 span {
+      color: var(--orange);
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .hero-buttons {
+      margin-top: 28px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      padding: 13px 22px;
+      border-radius: 8px;
+      font-weight: 700;
+      transition: 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--orange);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--orange-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid #333;
+      background: #151515;
+      color: #ddd;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--orange);
+      color: var(--orange);
+    }
+
+    /* STATS */
+
+    .stats {
+      max-width: 700px;
+      margin: 45px auto 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid #252525;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #111;
+    }
+
+    .stat {
+      padding: 18px 10px;
+      border-right: 1px solid #252525;
+    }
+
+    .stat:last-child {
+      border-right: none;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--orange);
+      font-size: 24px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* MAIN */
+
+    main {
+      max-width: 1150px;
+      margin: auto;
+      padding: 20px 18px 70px;
+    }
+
+    .section {
+      margin-top: 50px;
+    }
+
+    .section-heading {
+      margin-bottom: 20px;
+    }
+
+    .section-heading h2 {
+      font-family: "Barlow Condensed", sans-serif;
+      text-transform: uppercase;
+      font-size: 30px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* GUIDE CARDS */
+
+    .guides {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .guide {
+      display: block;
+      padding: 22px;
+      min-height: 155px;
+      border: 1px solid #282828;
+      border-radius: 12px;
+      background: var(--card);
+      transition: 0.2s;
+    }
+
+    .guide:hover {
+      transform: translateY(-4px);
+      border-color: var(--orange);
+      background: var(--card-hover);
+      box-shadow: 0 8px 30px var(--orange-glow);
+    }
+
+    .guide-icon {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .guide h3 {
+      font-size: 19px;
+      margin-bottom: 7px;
+    }
+
+    .guide p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .arrow {
+      display: inline-block;
+      margin-top: 14px;
+      color: var(--orange);
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    /* FEATURED */
+
+    .featured {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 15px;
+    }
+
+    .featured-main,
+    .featured-side {
+      background: var(--card);
+      border: 1px solid #282828;
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .featured-main {
+      border-color: var(--border);
+    }
+
+    .tag {
+      display: inline-block;
+      background: rgba(255, 94, 0, 0.12);
+      color: var(--orange-light);
+      padding: 5px 9px;
+      border-radius: 5px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .featured h3 {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 30px;
+      margin: 13px 0 8px;
+    }
+
+    .featured p {
+      color: var(--muted);
+    }
+
+    .featured-side a {
+      display: block;
+      padding: 13px 0;
+      border-bottom: 1px solid #292929;
+    }
+
+    .featured-side a:last-child {
+      border-bottom: none;
+    }
+
+    .featured-side a:hover {
+      color: var(--orange);
+    }
+
+    /* CTA */
+
+    .cta {
+      margin-top: 55px;
+      padding: 35px 25px;
+      text-align: center;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background:
+        radial-gradient(circle at center,
+        rgba(255,94,0,0.12),
+        transparent 65%);
+    }
+
+    .cta h2 {
+      font-family: "Rajdhani", sans-serif;
+      font-size: 32px;
+    }
+
+    .cta p {
+      color: var(--muted);
+      margin: 7px auto 20px;
+      max-width: 600px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid #222;
+      text-align: center;
+      padding: 30px 18px;
+      color: #777;
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: var(--orange);
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+      .nav-inner {
+        display: block;
+      }
+
+      .logo {
+        display: block;
+        margin-bottom: 12px;
+      }
+
+      .guides {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .featured {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero {
+        padding-top: 55px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .stat {
+        border-right: none;
+        border-bottom: 1px solid #252525;
+      }
+
+      .stat:last-child {
+        border-bottom: none;
+      }
+
+      .guides {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="nav-inner">
+
+    <a href="index.html" class="logo">
+      CHINESELOUD<span>.FF.GUIDE</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="characters.html">Characters</a>
+      <a href="weapons.html">Weapons</a>
+      <a href="sensitivity.html">Sensitivity</a>
+      <a href="strategies.html">Strategies</a>
+      <a href="ranktips.html">Rank Tips</a>
+      <a href="maps.html">Maps</a>
+      <a href="news.html">News</a>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+
+  <div class="hero-badge">
+    🎮 FREE FIRE COMMUNITY GUIDE
+  </div>
+
+  <h1>
+    CHINESELOUD<span>.FF.GUIDE</span>
+  </h1>
+
+  <p>
+    Free Fire characters, weapons, sensitivity guides,
+    rank tips, strategies, maps and useful game information
+    — all in one place.
+  </p>
+
+  <div class="hero-buttons">
+    <a href="characters.html" class="btn btn-primary">
+      Explore Characters
+    </a>
+
+    <a href="ranktips.html" class="btn btn-secondary">
+      Rank Up Tips
+    </a>
+  </div>
+
+  <div class="stats">
+
+    <div class="stat">
+      <strong>80+</strong>
+      <span>Characters & Weapons</span>
+    </div>
+
+    <div class="stat">
+      <strong>6+</strong>
+      <span>Game Guides</span>
+    </div>
+
+    <div class="stat">
+      <strong>100%</strong>
+      <span>Free Access</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<main>
+
+  <!-- MAIN CATEGORIES -->
+
+  <section class="section">
+
+    <div class="section-heading">
+      <h2>Explore Free Fire Guides</h2>
+      <p>Choose what you want to learn.</p>
+    </div>
+
+    <div class="guides">
+
+      <a href="characters.html" class="guide">
+        <div class="guide-icon">🧑‍🚀</div>
+        <h3>Characters</h3>
+        <p>
+          Explore character categories, abilities,
+          tiers and useful combinations.
+        </p>
+        <span class="arrow">Explore →</span>
+      </a>
+
+      <a href="weapons.html" class="guide">
+        <div class="guide-icon">🔫</div>
+        <h3>Weapons</h3>
+        <p>
+          Browse weapons by category and compare
+          their important stats.
+        </p>
+        <span class="arrow">View weapons →</span>
+      </a>
+
+      <a href="sensitivity.html" class="guide">
+        <div class="guide-icon">🎯</div>
+        <h3>Sensitivity</h3>
+        <p>
+          Find sensitivity guides and settings
+          to help improve your aim.
+        </p>
+        <span class="arrow">View settings →</span>
+      </a>
+
+      <a href="strategies.html" class="guide">
+        <div class="guide-icon">⚔️</div>
+        <h3>Strategies</h3>
+        <p>
+          Learn rushing, sniping, support and
+          ranked strategies.
+        </p>
+        <span class="arrow">Learn strategies →</span>
+      </a>
+
+      <a href="ranktips.html" class="guide">
+        <div class="guide-icon">🏆</div>
+        <h3>Rank Tips</h3>
+        <p>
+          Improve your BR and CS ranked game
+          with practical tips.
+        </p>
+        <span class="arrow">Push rank →</span>
+      </a>
+
+      <a href="maps.html" class="guide">
+        <div class="guide-icon">🗺️</div>
+        <h3>Maps</h3>
+        <p>
+          Learn locations, landing spots and
+          useful map information.
+        </p>
+        <span class="arrow">Explore maps →</span>
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FEATURED -->
+
+  <section class="section">
+
+    <div class="section-heading">
+      <h2>What Should You Check First?</h2>
+      <p>Quick guides for players who want useful information fast.</p>
+    </div>
+
+    <div class="featured">
+
+      <div class="featured-main">
+
+        <span class="tag">Popular Guide</span>
+
+        <h3>
+          Build Your Perfect Character Combination
+        </h3>
+
+        <p>
+          Find character combinations for rushing,
+          camping and different playstyles.
+        </p>
+
+        <a href="skills.html" class="btn btn-primary"
+           style="display:inline-block;margin-top:20px;">
+          View Character Combos
+        </a>
+
+      </div>
+
+
+      <div class="featured-side">
+
+        <a href="weapons.html">
+          🔫 Find a weapon for your playstyle →
+        </a>
+
+        <a href="sensitivity.html">
+          🎯 Improve your sensitivity →
+        </a>
+
+        <a href="strategies.html">
+          ⚔️ Learn better fight strategies →
+        </a>
+
+        <a href="ranktips.html">
+          🏆 Improve your ranked game →
+        </a>
+
+        <a href="news.html">
+          📰 Check the latest Free Fire information →
+        </a>
+
+        <a href="contact.html" class="btn btn-secondary">
+          📞 Contact Chineseloud
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- LATEST -->
+
+  <section class="section">
+
+    <div class="section-heading">
+      <h2>Latest From Chineseloud</h2>
+      <p>Keep an eye on the guide for new content.</p>
+    </div>
+
+    <div class="guides">
+
+      <a href="news.html" class="guide">
+        <div class="guide-icon">📰</div>
+        <h3>Free Fire News</h3>
+        <p>
+          Updates, events, collaborations and
+          other Free Fire information.
+        </p>
+        <span class="arrow">Read news →</span>
+      </a>
+
+      <a href="skills.html" class="guide">
+        <div class="guide-icon">🌀</div>
+        <h3>Character Skills</h3>
+        <p>
+          Understand active and passive skills
+          and possible combinations.
+        </p>
+        <span class="arrow">View skills →</span>
+      </a>
+
+      <a href="contact.html" class="guide">
+        <div class="guide-icon">💬</div>
+        <h3>Contact Chineseloud</h3>
+        <p>
+          Have a question, suggestion or want
+          to get in touch?
+        </p>
+        <span class="arrow">Contact →</span>
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <section class="cta">
+
+    <h2>READY TO IMPROVE YOUR GAME?</h2>
+
+    <p>
+      Pick a guide, learn something useful,
+      and get back into Free Fire.
+    </p>
+
+    <a href="characters.html" class="btn btn-primary">
+      Start Exploring
+    </a>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <p>
+    Made with ❤️ by <strong>Chineseloud</strong> © 2026 Chineseloud.
+  </p>
+
+  <p style="margin-top:6px;">
+    This site is a fan-made guide and is not affiliated with Garena.
+  </p>
+
+</footer>
+
+
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js");
+  }
+</script>
+
+</body>
+</html>
